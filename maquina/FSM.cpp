@@ -38,10 +38,13 @@ void offMonhum() {
 
 void onMonluz() {
   taskEntrada.Start();
+  taskLeer.Start();
+  taskEnviar.Start();
   Serial.println("Entrada a MONLUZ: Monitoreo de Fotocelda iniciado");
 }
 void offMonluz() {
   taskEntrada.Stop();
+  taskLeer.Stop();
   Serial.println("Salida de MONLUZ: Deteniendo monitoreo de luz");
 }
 
@@ -97,6 +100,7 @@ void setupMachine() {
   machine.SetOnLeaving(ALERTA, []() { offAlerta(); });
   machine.SetOnLeaving(ALARMA, []() { offAlarma(); });
 }
+
 
 
 
