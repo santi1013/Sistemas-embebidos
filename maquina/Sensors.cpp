@@ -22,8 +22,9 @@ void rgbRed() {
 }
 
 void rgbGreen() {
+  isOn = !isOn;
   digitalWrite(PIN_R, LOW);
-  digitalWrite(PIN_G, HIGH);
+  digitalWrite(PIN_G, isOn ? HIGH : LOW);
   digitalWrite(PIN_B, LOW);
 }
 
@@ -43,3 +44,4 @@ void readButton() {
   last = now;
 
 }
+
