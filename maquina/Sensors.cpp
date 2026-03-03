@@ -13,4 +13,33 @@ void toggleLed1() {
 void toggleLed2() {
   ledState = !ledState;
   digitalWrite(GLED, ledState);
+
+}
+void rgbRed() {
+  digitalWrite(PIN_R, HIGH);
+  digitalWrite(PIN_G, LOW);
+  digitalWrite(PIN_B, LOW)
+}
+
+void rgbGreen() {
+  digitalWrite(PIN_R, LOW);
+  digitalWrite(PIN_G, HIGH);
+  digitalWrite(PIN_B, LOW);
+}
+
+void rgbBlue() {
+  digitalWrite(PIN_R, LOW);
+  digitalWrite(PIN_G, LOW);
+  digitalWrite(PIN_B, HIGH);
+
+}
+void readButton() {
+  static bool last = HIGH;              // Sin presionar = HIGH (INPUT_PULLUP)
+  bool now = digitalRead(BTN_PIN); // Flanco de bajada: HIGH -> LOW (pulsación)
+  if (last == HIGH && now == LOW) {
+    boton = true;
+  }
+
+  last = now;
+
 }
