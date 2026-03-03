@@ -16,10 +16,6 @@ void offInicio() {
 
 void onMontem() {
   taskEntrada.Start();
-  dht.begin();
-  taskLeer.Start();
-  taskPromediar.Start();
-  taskEnviar.Start();
   Serial.println("Entrada a MONTEM Start() tareas correspondientes");
 }
 void offMontem() {
@@ -100,6 +96,7 @@ void setupMachine() {
   machine.SetOnLeaving(ALERTA, []() { offAlerta(); });
   machine.SetOnLeaving(ALARMA, []() { offAlarma(); });
 }
+
 
 
 
