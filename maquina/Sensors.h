@@ -3,7 +3,9 @@
 
 #include <Arduino.h>
 #include "Pinout.h"
+#include "AsyncTaskLib.h"
 
+#define dhtipo DHT11
 // Variables compartidas de sensores
 extern char entrada;
 extern bool ledState;
@@ -24,5 +26,6 @@ void rgbBlue();
 void readButton();
 
 #endif
+
 
 
