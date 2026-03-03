@@ -67,11 +67,11 @@ void setupMachine() {
   machine.AddTransition(MONTEM, ALERTA, []() { return entrada == '6'; });
 
   machine.AddTransition(ALERTA, MONTEM, []() { return entrada == '7'; });
-  machine.AddTransition(ALERTA, MONLUZ, []() { return entrada == '8'; });
-  machine.AddTransition(ALERTA, MONHUM, []() { return entrada == '9'; });
-  machine.AddTransition(ALERTA, ALARMA, []() { return entrada == '10'; });
+  machine.AddTransition(MONLUZ, ALERTA, []() { return entrada == '8'; });
+  machine.AddTransition(MONHUM, ALERTA, []() { return entrada == '9'; });
+  machine.AddTransition(ALERTA, ALARMA, []() { return entrada == 'x'; });
 
-  machine.AddTransition(ALARMA, INICIO, []() { return entrada == '11'; });
+  machine.AddTransition(ALARMA, INICIO, []() { return entrada == 'y'; });
 
   machine.SetOnEntering(INICIO, []() { onInicio(); });
   machine.SetOnEntering(MONTEM, []() { onMontem(); });
