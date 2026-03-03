@@ -75,7 +75,7 @@ void setupMachine() {
 
   machine.AddTransition(MONTEM, MONHUM, []() { return entrada == '2'; });
   machine.AddTransition(MONHUM, MONTEM, []() { return entrada == '3'; });
-  machine.AddTransition(MONTEM, MONLUZ, []() { return entrada == '4'; });
+  machine.AddTransition(MONTEM, MONLUZ, []() { return flameState == true; });
   machine.AddTransition(MONLUZ, MONTEM, []() { return entrada == '5'; });
   machine.AddTransition(MONTEM, ALERTA, []() { return entrada == '6'; });
 
@@ -100,6 +100,7 @@ void setupMachine() {
   machine.SetOnLeaving(ALERTA, []() { offAlerta(); });
   machine.SetOnLeaving(ALARMA, []() { offAlarma(); });
 }
+
 
 
 
