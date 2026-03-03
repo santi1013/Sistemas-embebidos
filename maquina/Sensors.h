@@ -11,6 +11,7 @@ extern char entrada;
 extern bool ledState;
 extern bool boton;
 extern bool isOn;
+extern bool flamaState;
 // Funciones de los diferentes sensores y procesos complementarios
 void leerEntrada();
 void toggleLed1();
@@ -27,6 +28,7 @@ void rgbBlue();
 void readButton();
 
 #endif
+
 
 
 
