@@ -62,46 +62,6 @@ void offAlarma() {
   taskEntrada.Stop();
   Serial.println("Salida de ALARMA: Desactivando actuadores de emergencia");
 }
-//funciones del sensor de luz
-void leerLuz(void){
-
-  float lectura = analogRead(ldrPin);
-
-  promedio.push(lectura);   // Agregamos lectura al buffer
-
-  if(promedio.isFull()){    // Cuando ya tiene las 4 muestras
-    taskPromediar.Start();
-  }
-}
-
-
-void enviarLuz(void){
-  luzPromedio = promedio.mean();  // Calcula promedio
-  taskEnviar.Start();
-
-  Serial.println("Nivel de luz (ADC): ");
-  Serial.println(luzPromedio);
-
-  Serial.println("Numero de muestras: ");
-  Serial.println(numu);
-
-  Serial.println("Tiempo (ms): ");
-  Serial.println(millis());
-
-  Serial.println("-------------------------");
-
-  promedio.clear();   // Limpia el buffer para nuevas muestras
-}
-//del sensor de flama
-void leerFlama(void) {
-  int estado = digitalRead(flamePin);
-
-  if (estado == LOW) {
-    Serial.println("LLAMA DETECTADA");
-  } else {
-    Serial.println("No hay llama");
-  }
-}
 
 // --- Setup de la máquina ---
 void setupMachine() {
@@ -134,6 +94,7 @@ void setupMachine() {
   machine.SetOnLeaving(ALERTA, []() { offAlerta(); });
   machine.SetOnLeaving(ALARMA, []() { offAlarma(); });
 }
+
 
 
 
