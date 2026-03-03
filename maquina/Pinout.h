@@ -2,7 +2,8 @@
 #define PINOUT_H
 //DEFINICION DE PINES
 #define GLED 2
-#define FlamePin 26
-#define ldrPin 34
+#define FLAME 26
+#define lUZ 34
 
 #endif
+
