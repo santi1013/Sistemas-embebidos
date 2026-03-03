@@ -12,6 +12,8 @@ AsyncTask taskLeerFlama(periodoLectura, true, []() { leerFlama(); });
 AsyncTask taskGreen  (200, true,  []() { rgbGreen();    });
 AsyncTask taskBoton  (10, true,   []() { readButton();  });
 
+AsyncTask taskBlue (200, true,  []() { rgbBlue();    });
+
 
 
 
