@@ -8,6 +8,7 @@ char entrada = ' ';
 bool ledState = false;
 bool isOn = false;
 bool boton = false;
+bool flameState = false;
 
 void setup() {
   pinMode(GLED, OUTPUT);
