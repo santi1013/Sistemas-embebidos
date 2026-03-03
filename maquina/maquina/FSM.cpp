@@ -4,52 +4,85 @@
 StateMachine machine(6, 2);
 
 // --- Callbacks de estados ---
-void onEstado1() {
-  Serial.println("Estado 1: 200/200ms");
-  ledState = false;
-  taskEntrada.Start();
-  taskBlink1.Start();
-}
-void Inicio() {
+
+void onInicio() {
   serial.println("Iniciando Maquina")
   taskGreen.Start();
   taskBoton.Start();
 }
-void Temperatura() {
+void onMontem() {
   dht.begin();
   taskLeer.Start();
   taskPromediar.Start();
   taskEnviar.Start();
+  Serial.println("Entrada a MONTEM Start() tareas correspondientes");
+}
+void offMontem() {
+  taskEntrada.Stop();
+  Serial.println("Salida de MONTEM Stop() tareas correspondientes");
 }
 
-void offEstado1() {
-  taskBlink1.Stop();
-  digitalWrite(GLED, LOW);
-  entrada = ' ';
-}
-
-void onEstado2() {
-  Serial.println("Estado 2: 300/500ms");
-  ledState = false;
-  taskBlink2.SetIntervalMillis(300);
+void onMonhum() {
   taskEntrada.Start();
-  taskBlink2.Start();
+  Serial.println("Entrada a MONHUM: Monitoreo de Humedad iniciado");
 }
-void offEstado2() {
-  taskBlink2.Stop();
-  digitalWrite(GLED, LOW);
-  entrada = ' ';
+void offMonhum() {
+  taskEntrada.Stop();
+  Serial.println("Salida de MONHUM: Deteniendo tareas de humedad");
 }
 
-// --- Setup de la máquina ---
+void onMonluz() {
+  taskEntrada.Start();
+  Serial.println("Entrada a MONLUZ: Monitoreo de Fotocelda iniciado");
+}
+void offMonluz() {
+  taskEntrada.Stop();
+  Serial.println("Salida de MONLUZ: Deteniendo monitoreo de luz");
+}
+
+void onAlerta() {
+  taskEntrada.Start();
+  Serial.println("Entrada a ALERTA: ¡Condición anómala detectada!");
+}
+void offAlerta() {
+  taskEntrada.Stop();
+  Serial.println("Salida de ALERTA: Limpiando estado de alerta");
+}
+
+void onAlarma() {
+  taskEntrada.Start();
+  Serial.println("Entrada a ALARMA: ¡PELIGRO DETECTADO!");
+}
+void offAlarma() {
+  taskEntrada.Stop();
+  Serial.println("Salida de ALARMA: Desactivando actuadores de emergencia");
+}
+
 void setupMachine() {
-  machine.AddTransition(IINICIO, TEMPERATURA, []() { return boton == true; });
-  machine.AddTransition(ESTADO1, ESTADO2, []() { return entrada == '2'; });
-  machine.AddTransition(ESTADO2, ESTADO1, []() { return entrada == '1'; });
+  machine.AddTransition(INICIO, MONTEM, []() { return boton == true; });
+  machine.AddTransition(MONTEM, MONHUM, []() { return entrada == '2'; });
+  machine.AddTransition(MONHUM, MONTEM, []() { return entrada == '3'; });
+  machine.AddTransition(MONTEM, MONLUZ, []() { return entrada == '4'; });
+  machine.AddTransition(MONLUZ, MONTEM, []() { return entrada == '5'; });
+  machine.AddTransition(MONTEM, ALERTA, []() { return entrada == '6'; });
 
-  machine.SetOnEntering(INICIO, []() { Inicio(); });
-  machine.SetOnEntering(TEMPERATURA, []() { Temperatura(); });
+  machine.AddTransition(ALERTA, MONTEM, []() { return entrada == '7'; });
+  machine.AddTransition(ALERTA, MONLUZ, []() { return entrada == '8'; });
+  machine.AddTransition(ALERTA, MONHUM, []() { return entrada == '9'; });
+  machine.AddTransition(ALERTA, ALARMA, []() { return entrada == '10'; });
 
-  machine.SetOnLeaving(ESTADO1,  []() { offEstado1(); });
-  machine.SetOnLeaving(ESTADO2,  []() { offEstado2(); });
-}
+  machine.AddTransition(ALARMA, INICIO, []() { return entrada == '11'; });
+
+  machine.SetOnEntering(INICIO, []() { onInicio(); });
+  machine.SetOnEntering(MONTEM, []() { onMontem(); });
+  machine.SetOnEntering(MONHUM, []() { onMonhum(); });
+  machine.SetOnEntering(MONLUZ, []() { onMonluz(); });
+  machine.SetOnEntering(ALERTA, []() { onAlerta(); });
+  machine.SetOnEntering(ALARMA, []() { onAlarma(); });
+
+  machine.SetOnLeaving(INICIO, []() { offInicio(); });
+  machine.SetOnLeaving(MONTEM, []() { offMontem(); });
+  machine.SetOnLeaving(MONHUM, []() { offMonhum(); });
+  machine.SetOnLeaving(MONLUZ, []() { offMonluz(); });
+  machine.SetOnLeaving(ALERTA, []() { offAlerta(); });
+  machine.SetOnLeaving(ALARMA, []() { offAlarma(); });
