@@ -11,6 +11,8 @@ void onInicio() {
 }
 void offInicio() {
   taskEntrada.Stop();
+  taskGreen.Stop();
+  taskBoton.Stop();
   Serial.println("Salida de INICIO Stop() tareas correspondientes");
 }
 
@@ -96,6 +98,7 @@ void setupMachine() {
   machine.SetOnLeaving(ALERTA, []() { offAlerta(); });
   machine.SetOnLeaving(ALARMA, []() { offAlarma(); });
 }
+
 
 
 
