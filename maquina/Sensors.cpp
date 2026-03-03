@@ -77,12 +77,14 @@ void enviarLuz(void){
 //del sensor de flama
 void leerFlama(void) {
   int estado = digitalRead(flamePin);
-
+  
   if (estado == LOW) {
+    flameState = true;
     Serial.println("LLAMA DETECTADA");
   } else {
-    Serial.println("No hay llama");
+    flameState = false;
   }
 }
+
 
 
