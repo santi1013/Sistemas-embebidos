@@ -12,7 +12,9 @@ extern AsyncTask taskPromediar;
 extern AsyncTask taskEnviar;
 //tareas del sensor de flama
 extern AsyncTask taskLeer;
-
+extern Asynctask taskGreen;
+extern Asynctask taskBoton;
 
 
 #endif
+
