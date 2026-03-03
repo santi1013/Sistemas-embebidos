@@ -63,6 +63,9 @@ void offAlarma() {
   Serial.println("Salida de ALARMA: Desactivando actuadores de emergencia");
 }
 
+//del sensor luz
+
+
 // --- Setup de la máquina ---
 void setupMachine() {
   machine.AddTransition(INICIO, MONTEM, []() { return entrada == '1'; });
@@ -94,6 +97,7 @@ void setupMachine() {
   machine.SetOnLeaving(ALERTA, []() { offAlerta(); });
   machine.SetOnLeaving(ALARMA, []() { offAlarma(); });
 }
+
 
 
 
