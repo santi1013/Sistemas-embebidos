@@ -92,6 +92,16 @@ void enviarLuz(void){
 
   promedio.clear();   // Limpia el buffer para nuevas muestras
 }
+//del sensor de flama
+void leerFlama(void) {
+  int estado = digitalRead(flamePin);
+
+  if (estado == LOW) {
+    Serial.println("LLAMA DETECTADA");
+  } else {
+    Serial.println("No hay llama");
+  }
+}
 
 // --- Setup de la máquina ---
 void setupMachine() {
@@ -124,5 +134,6 @@ void setupMachine() {
   machine.SetOnLeaving(ALERTA, []() { offAlerta(); });
   machine.SetOnLeaving(ALARMA, []() { offAlarma(); });
 }
+
 
 
