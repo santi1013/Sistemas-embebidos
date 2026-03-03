@@ -7,15 +7,16 @@
 
 enum State {
   INICIO = 0,
-  TEMPERATURA = 1,
-  HUMEDAD = 2,
-  LUZ = 3,
-  ALERTA =4,
-  ALARMA =5
+  MONTEM = 1,
+  MONHUM = 2,
+  MONLUZ = 3,
+  ALERTA = 4,
+  ALARMA = 5
 };
 
 extern StateMachine machine;
 
 void setupMachine();
+
 
 #endif
