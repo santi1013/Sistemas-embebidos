@@ -29,9 +29,19 @@ void rgbGreen() {
 }
 
 void rgbBlue() {
-  digitalWrite(PIN_R, LOW);
-  digitalWrite(PIN_G, LOW);
-  digitalWrite(PIN_B, HIGH);
+  static bool blueOn = false;
+  blueOn = !blueOn;
+  if (blueOn) {
+    digitalWrite(PIN_R, LOW);
+    digitalWrite(PIN_G, LOW);
+    digitalWrite(PIN_B, HIGH);
+    taskBlue.SetIntervalMillis(500);   // tiempo encendido
+  }
+  else {
+    digitalWrite(PIN_B, LOW);
+    taskBlue.SetIntervalMillis(900);   // tiempo apagado
+  }
+}
 
 }
 void readButton() {
@@ -85,6 +95,7 @@ void leerFlama(void) {
     flameState = false;
   }
 }
+
 
 
 
