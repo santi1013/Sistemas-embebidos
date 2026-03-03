@@ -5,6 +5,8 @@ StateMachine machine(6, 11);
 // --- Callbacks de estados ---
 void onInicio() {
   taskEntrada.Start();
+  taskGreen.Start();
+  taskBoton.Start();
   Serial.println("Entrada a INICIO Start() tareas correspondientes");
 }
 void offInicio() {
@@ -14,6 +16,10 @@ void offInicio() {
 
 void onMontem() {
   taskEntrada.Start();
+  dht.begin();
+  taskLeer.Start();
+  taskPromediar.Start();
+  taskEnviar.Start();
   Serial.println("Entrada a MONTEM Start() tareas correspondientes");
 }
 void offMontem() {
@@ -87,3 +93,4 @@ void setupMachine() {
   machine.SetOnLeaving(ALERTA, []() { offAlerta(); });
   machine.SetOnLeaving(ALARMA, []() { offAlarma(); });
 }
+
