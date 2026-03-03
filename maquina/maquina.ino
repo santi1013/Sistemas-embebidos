@@ -6,6 +6,8 @@
 // Definición de variables globales (una sola vez aquí)
 char entrada = ' ';
 bool ledState = false;
+bool isOn = false;
+bool boton = false;
 
 void setup() {
   pinMode(GLED, OUTPUT);
