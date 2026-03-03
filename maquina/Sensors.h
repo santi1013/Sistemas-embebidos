@@ -16,5 +16,9 @@ void toggleLed2();
 void leerLuz(void);
 void promLuz(void);
 void enviarLuz(void);
+//funcion del sensor de flama 
+void leerFlama(void);
+
 
 #endif
+
