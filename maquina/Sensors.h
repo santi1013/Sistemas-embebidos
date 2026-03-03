@@ -12,5 +12,9 @@ extern bool ledState;
 void leerEntrada();
 void toggleLed1();
 void toggleLed2();
+// Funciones de el ldr
+void leerLuz(void);
+void promLuz(void);
+void enviarLuz(void);
 
 #endif
