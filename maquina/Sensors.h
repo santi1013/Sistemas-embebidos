@@ -6,6 +6,11 @@
 #include "AsyncTaskLib.h"
 
 #define dhtipo DHT11
+
+#define numu 4
+
+Average<float> promedio(numu);
+float luzPromedio = 0.0f;
 // Variables compartidas de sensores
 extern char entrada;
 extern bool ledState;
@@ -28,6 +33,7 @@ void rgbBlue();
 void readButton();
 
 #endif
+
 
 
 
