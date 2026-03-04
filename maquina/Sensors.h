@@ -32,7 +32,13 @@ void rgbGreen();
 void rgbBlue();
 void readButton();
 
+//Sensor dht11
+void leerTemperatura(void);
+void promTemperatura(void);
+void enviarTemperatura(void);
+
 #endif
+
 
 
 
