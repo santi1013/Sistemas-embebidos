@@ -15,7 +15,12 @@ extern Asynctask taskGreen;
 extern Asynctask taskBoton;
 
 extern Asynctask taskBlue;
+extern AsyncTask taskLeertemp;
+extern AsyncTask taskPromediar;
+extern AsyncTask taskEnviartemp;
+
 #endif
+
 
 
 
