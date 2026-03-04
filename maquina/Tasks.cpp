@@ -15,9 +15,10 @@ AsyncTask taskBoton  (10, true,   []() { readButton();  });
 AsyncTask taskBlue (200, true,  []() { rgbBlue();    });
 
 // del sensor dht11
-AsyncTask taskLeer(1800, true, []() { leerTemperatura(); });
+AsyncTask taskLeertemp(1800, true, []() { leerTemperatura(); });
 AsyncTask taskPromediar(1, false, []() { promTemperatura(); });
-AsyncTask taskEnviar(1, false, []() { enviarTemperatura(); });
+AsyncTask taskEnviartemp(1, false, []() { enviarTemperatura(); });
+
 
 
 
