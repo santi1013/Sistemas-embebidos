@@ -9,6 +9,9 @@
 #define PIN_B 27
 #define BTN_PIN 6 
 
+#define DHT 4
+
 #endif
+
 
 
