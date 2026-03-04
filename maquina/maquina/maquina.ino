@@ -6,9 +6,14 @@
 // Definición de variables globales (una sola vez aquí)
 char entrada = ' ';
 bool ledState = false;
-bool boton = false;
+int conteoAlerta = 0;
+bool t5 = false;
+bool t3 = false;
+
 void setup() {
-  pinMode(GLED, OUTPUT);
+  pinMode(GLEDPIN, OUTPUT);
+  pinMode(BLEDPIN, OUTPUT);
+  pinMode(RLEDPIN, OUTPUT);
   Serial.begin(9600);
   setupMachine();
   machine.SetState(INICIO, false, true);
@@ -17,11 +22,9 @@ void setup() {
 void loop() {
   machine.Update();
   taskEntrada.Update();
-  taskBlink1.Update();
-  taskBlink2.Update();
-  taskGreen.Update();
-  taskBoton.Update();
-  taskLeer.Update();
-  taskPromediar.Update();
-  taskEnviar.Update();
+  taskEncenderLedG.Update();
+  taskEncenderLedB.Update();
+  taskEncenderLedR.Update();
+  taskT5.Update();
+  taskT3.Update();
 }

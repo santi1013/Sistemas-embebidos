@@ -1,10 +1,11 @@
 #ifndef PINOUT_H
 #define PINOUT_H
+//DEFINICION DE PINES
+#define GLEDPIN 22
+#define BLEDPIN 23
+#define RLEDPIN 21
 
-#define GLED 2
-#define PIN_R 25
-#define PIN_G 26
-#define PIN_B 27
-#define BTN_PIN 6 
+//Temperatura
+#define DHTPIN 4
 
 #endif

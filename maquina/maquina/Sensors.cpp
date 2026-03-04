@@ -1,46 +1,33 @@
 #include "Sensors.h"
 #include "Tasks.h"
 
+//Variables INICIO
 
 void leerEntrada() {
   if (Serial.available()) entrada = Serial.read();
 }
 
-void toggleLed1() {
+void greenLed() {
   ledState = !ledState;
-  digitalWrite(GLED, ledState);
+  digitalWrite(GLEDPIN, ledState);
 }
-
-void toggleLed2() {
+void blueLed() {
   ledState = !ledState;
-  digitalWrite(GLED, ledState);
-  taskBlink2.SetIntervalMillis(ledState ? 300 : 500);
-}
-void rgbRed() {
-  digitalWrite(PIN_R, HIGH);
-  digitalWrite(PIN_G, LOW);
-  digitalWrite(PIN_B, LOW)
-}
+  digitalWrite(BLEDPIN, ledState);
 
-void rgbGreen() {
-  digitalWrite(PIN_R, LOW);
-  digitalWrite(PIN_G, HIGH);
-  digitalWrite(PIN_B, LOW);
+  taskEncenderLedB.SetIntervalMillis(ledState ? 500 : 900);
+}
+void redLed() {
+  ledState = !ledState;
+  digitalWrite(RLEDPIN, ledState);
+
+  taskEncenderLedB.SetIntervalMillis(ledState ? 100 : 300);
 }
 
-void rgbBlue() {
-  digitalWrite(PIN_R, LOW);
-  digitalWrite(PIN_G, LOW);
-  digitalWrite(PIN_B, HIGH);
-
+//Transiciones
+void DoneT5(){
+  t5 = true;
 }
-void readButton() {
-  static bool last = HIGH;              // Sin presionar = HIGH (INPUT_PULLUP)
-  bool now = digitalRead(BTN_PIN); // Flanco de bajada: HIGH -> LOW (pulsación)
-  if (last == HIGH && now == LOW) {
-    boton = true;
-  }
-
-  last = now;
-
+void DoneT3(){
+  t3 = true;
 }

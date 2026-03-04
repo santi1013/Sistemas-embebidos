@@ -18,5 +18,4 @@ extern StateMachine machine;
 
 void setupMachine();
 
-
 #endif

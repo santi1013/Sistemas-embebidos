@@ -5,11 +5,15 @@
 #include "Sensors.h"
 
 extern AsyncTask taskEntrada;
-extern AsyncTask taskBlink1;
-extern AsyncTask taskBlink2;
-extern Asynctask taskGreen;
-extern Asynctask taskBoton;
-extern taskLeer;
-extern taskPromediar;
-extern taskEnviar;
+
+//INICIO
+extern AsyncTask taskEncenderLedG;
+extern AsyncTask taskEncenderLedB;
+extern AsyncTask taskEncenderLedR;
+
+//Transiciones de tiempo
+extern AsyncTask taskT5;
+extern AsyncTask taskT3;
+
+
 #endif

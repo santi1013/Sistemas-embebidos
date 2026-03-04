@@ -3,30 +3,22 @@
 
 #include <Arduino.h>
 #include "Pinout.h"
-#include <DHT.h>
-#include "AsyncTaskLib.h"
-
-#define dhtipo DHT11
-#define numu 4
 
 // Variables compartidas de sensores
 extern char entrada;
 extern bool ledState;
-extern bool boton;
+extern int conteoAlerta;
+extern bool t5;
+extern bool t3;
 
-
-// Funciones de sensores/actuadores
+// Funciones de los diferentes sensores y procesos complementarios
 void leerEntrada();
-void toggleLed1();
-void toggleLed2();
-void rgbRed();
-void rgbGreen();
-void rgbBlue();
-void readButton();
-void leerTemperatura();
-void promTemperatura();
-void enviarTemperatura();
+void greenLed();
+void blueLed();
+void redLed();
 
-
+//Transiciones de tiempo
+void DoneT5();
+void DoneT3();
 
 #endif
