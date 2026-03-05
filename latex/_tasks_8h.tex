@@ -1,0 +1,284 @@
+\doxysection{maquina\+Estados/\+\+Tasks.h File Reference}
+\hypertarget{_tasks_8h}{}\label{_tasks_8h}\index{maquinaEstados/Tasks.h@{maquinaEstados/Tasks.h}}
+{\ttfamily \+\#include "{}Async\+Task\+Lib.\+h"{}}\newline
+{\ttfamily \+\#include "{}Sensors.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_tasks_8h_aa8585c77ffe0287457fe864dda9a0ee5}{FLAMA\+\_\+\+PERIOD}}~500
+\item 
+\+\#define \doxymbox{\hyperlink{_tasks_8h_a78bdc82dc6e84a3abab7fced5d50f7ad}{TASK\+\_\+\+ENTRADA\+\_\+\+PERIOD}}~20
+\item 
+\+\#define \doxymbox{\hyperlink{_tasks_8h_a874e38df4bbcdc629a75071598fcbdc2}{LED\+\_\+\+G\+\_\+\+PERIOD}}~200
+\item 
+\+\#define \doxymbox{\hyperlink{_tasks_8h_a3f477a18f780b528bf6f959c87dc7d69}{LED\+\_\+\+B\+\_\+\+PERIOD}}~500
+\item 
+\+\#define \doxymbox{\hyperlink{_tasks_8h_a2dab6b1a8f14c0b03889e711bb6aa277}{LED\+\_\+\+R\+\_\+\+PERIOD}}~100
+\item 
+\+\#define \doxymbox{\hyperlink{_tasks_8h_a3558d9637c00c36cd3768c1939889ad9}{T5\+\_\+\+PERIOD}}~5000
+\item 
+\+\#define \doxymbox{\hyperlink{_tasks_8h_aed18f7722f07b5e8a49b2c11599c69ff}{T3\+\_\+\+PERIOD}}~3000
+\item 
+\+\#define \doxymbox{\hyperlink{_tasks_8h_ab962e25a153041c05710d942fda48041}{T2\+\_\+\+PERIOD}}~2000
+\item 
+\+\#define \doxymbox{\hyperlink{_tasks_8h_adfaf716753fa25473a6f1c7b42497e5e}{T4\+\_\+\+PERIOD}}~4000
+\item 
+\+\#define \doxymbox{\hyperlink{_tasks_8h_aa827f6c0b31edd3565475c5d3db4a1e2}{LUZ\+\_\+\+READ\+\_\+\+PERIOD}}~500
+\item 
+\+\#define \doxymbox{\hyperlink{_tasks_8h_adfdba6b1ef0b2933e3512063c320fc39}{TEMP\+\_\+\+READ\+\_\+\+PERIOD}}~1500
+\item 
+\+\#define \doxymbox{\hyperlink{_tasks_8h_aa3ac60648884aae45e246d3f83c6931a}{HUM\+\_\+\+READ\+\_\+\+PERIOD}}~1500
+\item 
+\+\#define \doxymbox{\hyperlink{_tasks_8h_a0391b411c24490db6a0d9cac41338538}{SEND\+\_\+\+PERIOD}}~300
+\item 
+\+\#define \doxymbox{\hyperlink{_tasks_8h_aec9881842dca89bd8ae34560701277ab}{BTN\+\_\+\+PERIOD}}~20
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8h_a683384869bf5f947a52a4bde6745679c}{task\+Encender\+LedG}}
+\begin{DoxyCompactList}\small\item\em Tarea encargada del parpadeo del LED verde en el estado inicial. \end{DoxyCompactList}\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8h_af29f1785a18e7a1a2e765fe10a97865d}{task\+Encender\+LedB}}
+\begin{DoxyCompactList}\small\item\em Tarea encargada del parpadeo del LED azul cuando el sistema está en estado de alerta. \end{DoxyCompactList}\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8h_a6811b36cdd04265d91531a526e916465}{task\+Encender\+LedR}}
+\begin{DoxyCompactList}\small\item\em Tarea encargada del parpadeo del LED rojo cuando el sistema está en estado de alarma. \end{DoxyCompactList}\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8h_a6c17ce55db16d729744c5b8f7e2edfe0}{task\+T5}}
+\begin{DoxyCompactList}\small\item\em Temporizador T5 utilizado para generar transiciones de estado basadas en tiempo. \end{DoxyCompactList}\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8h_a9566bf61e6dc06c464dd17efffd44291}{task\+T3}}
+\begin{DoxyCompactList}\small\item\em Temporizador T3 utilizado para controlar tiempos de permanencia en ciertos estados. \end{DoxyCompactList}\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8h_a6a72a819daef6ab810a8eb5b683b4057}{task\+T2}}
+\begin{DoxyCompactList}\small\item\em Temporizador T2 utilizado para habilitar ciertas transiciones dentro de la máquina de estados. \end{DoxyCompactList}\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8h_a43401ed25496ca400b6b09b688fc4df0}{task\+T4}}
+\begin{DoxyCompactList}\small\item\em Temporizador T4 utilizado para generar eventos temporales en el monitoreo del sistema. \end{DoxyCompactList}\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8h_a23523747c90863a48a8f98e756061426}{task\+Flama}}
+\begin{DoxyCompactList}\small\item\em Tarea encargada de leer periódicamente el sensor de flama. \end{DoxyCompactList}\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8h_a6cc696b7a7f75e04c9a572f937e83aea}{task\+Leer\+Luz}}
+\begin{DoxyCompactList}\small\item\em Tarea encargada de leer muestras del sensor de luz (LDR). \end{DoxyCompactList}\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8h_a920072031675c1d1edf8f1371eaa3dc0}{task\+Leer\+Tem}}
+\begin{DoxyCompactList}\small\item\em Tarea encargada de leer muestras del sensor de temperatura del DHT. \end{DoxyCompactList}\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8h_a07c21fcab016d7fce8d80c4d9e5c2a98}{task\+Leer\+Hum}}
+\begin{DoxyCompactList}\small\item\em Tarea encargada de leer muestras del sensor de humedad del DHT. \end{DoxyCompactList}\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8h_a05f09f0bbcf62aa3441e325ee6424f2c}{task\+Enviar}}
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8h_a716f67957d75f8dc1763fb5ba6d4cede}{task\+Boton}}
+\begin{DoxyCompactList}\small\item\em Tarea encargada de leer el estado del botón y generar el evento correspondiente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_tasks_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_tasks_8h_aec9881842dca89bd8ae34560701277ab}\index{Tasks.h@{Tasks.h}!BTN\_PERIOD@{BTN\_PERIOD}}
+\index{BTN\_PERIOD@{BTN\_PERIOD}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{BTN\_PERIOD}{BTN\_PERIOD}}
+{\footnotesize\ttfamily \label{_tasks_8h_aec9881842dca89bd8ae34560701277ab} 
+\+\#define BTN\+\_\+\+PERIOD~20}
+
+\Hypertarget{_tasks_8h_aa8585c77ffe0287457fe864dda9a0ee5}\index{Tasks.h@{Tasks.h}!FLAMA\_PERIOD@{FLAMA\_PERIOD}}
+\index{FLAMA\_PERIOD@{FLAMA\_PERIOD}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{FLAMA\_PERIOD}{FLAMA\_PERIOD}}
+{\footnotesize\ttfamily \label{_tasks_8h_aa8585c77ffe0287457fe864dda9a0ee5} 
+\+\#define FLAMA\+\_\+\+PERIOD~500}
+
+\Hypertarget{_tasks_8h_aa3ac60648884aae45e246d3f83c6931a}\index{Tasks.h@{Tasks.h}!HUM\_READ\_PERIOD@{HUM\_READ\_PERIOD}}
+\index{HUM\_READ\_PERIOD@{HUM\_READ\_PERIOD}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{HUM\_READ\_PERIOD}{HUM\_READ\_PERIOD}}
+{\footnotesize\ttfamily \label{_tasks_8h_aa3ac60648884aae45e246d3f83c6931a} 
+\+\#define HUM\+\_\+\+READ\+\_\+\+PERIOD~1500}
+
+\Hypertarget{_tasks_8h_a3f477a18f780b528bf6f959c87dc7d69}\index{Tasks.h@{Tasks.h}!LED\_B\_PERIOD@{LED\_B\_PERIOD}}
+\index{LED\_B\_PERIOD@{LED\_B\_PERIOD}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{LED\_B\_PERIOD}{LED\_B\_PERIOD}}
+{\footnotesize\ttfamily \label{_tasks_8h_a3f477a18f780b528bf6f959c87dc7d69} 
+\+\#define LED\+\_\+\+B\+\_\+\+PERIOD~500}
+
+\Hypertarget{_tasks_8h_a874e38df4bbcdc629a75071598fcbdc2}\index{Tasks.h@{Tasks.h}!LED\_G\_PERIOD@{LED\_G\_PERIOD}}
+\index{LED\_G\_PERIOD@{LED\_G\_PERIOD}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{LED\_G\_PERIOD}{LED\_G\_PERIOD}}
+{\footnotesize\ttfamily \label{_tasks_8h_a874e38df4bbcdc629a75071598fcbdc2} 
+\+\#define LED\+\_\+\+G\+\_\+\+PERIOD~200}
+
+\Hypertarget{_tasks_8h_a2dab6b1a8f14c0b03889e711bb6aa277}\index{Tasks.h@{Tasks.h}!LED\_R\_PERIOD@{LED\_R\_PERIOD}}
+\index{LED\_R\_PERIOD@{LED\_R\_PERIOD}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{LED\_R\_PERIOD}{LED\_R\_PERIOD}}
+{\footnotesize\ttfamily \label{_tasks_8h_a2dab6b1a8f14c0b03889e711bb6aa277} 
+\+\#define LED\+\_\+\+R\+\_\+\+PERIOD~100}
+
+\Hypertarget{_tasks_8h_aa827f6c0b31edd3565475c5d3db4a1e2}\index{Tasks.h@{Tasks.h}!LUZ\_READ\_PERIOD@{LUZ\_READ\_PERIOD}}
+\index{LUZ\_READ\_PERIOD@{LUZ\_READ\_PERIOD}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{LUZ\_READ\_PERIOD}{LUZ\_READ\_PERIOD}}
+{\footnotesize\ttfamily \label{_tasks_8h_aa827f6c0b31edd3565475c5d3db4a1e2} 
+\+\#define LUZ\+\_\+\+READ\+\_\+\+PERIOD~500}
+
+\Hypertarget{_tasks_8h_a0391b411c24490db6a0d9cac41338538}\index{Tasks.h@{Tasks.h}!SEND\_PERIOD@{SEND\_PERIOD}}
+\index{SEND\_PERIOD@{SEND\_PERIOD}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{SEND\_PERIOD}{SEND\_PERIOD}}
+{\footnotesize\ttfamily \label{_tasks_8h_a0391b411c24490db6a0d9cac41338538} 
+\+\#define SEND\+\_\+\+PERIOD~300}
+
+\Hypertarget{_tasks_8h_ab962e25a153041c05710d942fda48041}\index{Tasks.h@{Tasks.h}!T2\_PERIOD@{T2\_PERIOD}}
+\index{T2\_PERIOD@{T2\_PERIOD}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{T2\_PERIOD}{T2\_PERIOD}}
+{\footnotesize\ttfamily \label{_tasks_8h_ab962e25a153041c05710d942fda48041} 
+\+\#define T2\+\_\+\+PERIOD~2000}
+
+\Hypertarget{_tasks_8h_aed18f7722f07b5e8a49b2c11599c69ff}\index{Tasks.h@{Tasks.h}!T3\_PERIOD@{T3\_PERIOD}}
+\index{T3\_PERIOD@{T3\_PERIOD}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{T3\_PERIOD}{T3\_PERIOD}}
+{\footnotesize\ttfamily \label{_tasks_8h_aed18f7722f07b5e8a49b2c11599c69ff} 
+\+\#define T3\+\_\+\+PERIOD~3000}
+
+\Hypertarget{_tasks_8h_adfaf716753fa25473a6f1c7b42497e5e}\index{Tasks.h@{Tasks.h}!T4\_PERIOD@{T4\_PERIOD}}
+\index{T4\_PERIOD@{T4\_PERIOD}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{T4\_PERIOD}{T4\_PERIOD}}
+{\footnotesize\ttfamily \label{_tasks_8h_adfaf716753fa25473a6f1c7b42497e5e} 
+\+\#define T4\+\_\+\+PERIOD~4000}
+
+\Hypertarget{_tasks_8h_a3558d9637c00c36cd3768c1939889ad9}\index{Tasks.h@{Tasks.h}!T5\_PERIOD@{T5\_PERIOD}}
+\index{T5\_PERIOD@{T5\_PERIOD}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{T5\_PERIOD}{T5\_PERIOD}}
+{\footnotesize\ttfamily \label{_tasks_8h_a3558d9637c00c36cd3768c1939889ad9} 
+\+\#define T5\+\_\+\+PERIOD~5000}
+
+\Hypertarget{_tasks_8h_a78bdc82dc6e84a3abab7fced5d50f7ad}\index{Tasks.h@{Tasks.h}!TASK\_ENTRADA\_PERIOD@{TASK\_ENTRADA\_PERIOD}}
+\index{TASK\_ENTRADA\_PERIOD@{TASK\_ENTRADA\_PERIOD}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{TASK\_ENTRADA\_PERIOD}{TASK\_ENTRADA\_PERIOD}}
+{\footnotesize\ttfamily \label{_tasks_8h_a78bdc82dc6e84a3abab7fced5d50f7ad} 
+\+\#define TASK\+\_\+\+ENTRADA\+\_\+\+PERIOD~20}
+
+\Hypertarget{_tasks_8h_adfdba6b1ef0b2933e3512063c320fc39}\index{Tasks.h@{Tasks.h}!TEMP\_READ\_PERIOD@{TEMP\_READ\_PERIOD}}
+\index{TEMP\_READ\_PERIOD@{TEMP\_READ\_PERIOD}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{TEMP\_READ\_PERIOD}{TEMP\_READ\_PERIOD}}
+{\footnotesize\ttfamily \label{_tasks_8h_adfdba6b1ef0b2933e3512063c320fc39} 
+\+\#define TEMP\+\_\+\+READ\+\_\+\+PERIOD~1500}
+
+
+
+\label{doc-var-members}
+\Hypertarget{_tasks_8h_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{_tasks_8h_a716f67957d75f8dc1763fb5ba6d4cede}\index{Tasks.h@{Tasks.h}!taskBoton@{taskBoton}}
+\index{taskBoton@{taskBoton}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskBoton}{taskBoton}}
+{\footnotesize\ttfamily \label{_tasks_8h_a716f67957d75f8dc1763fb5ba6d4cede} 
+Async\+Task task\+Boton\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Tarea encargada de leer el estado del botón y generar el evento correspondiente. 
+
+\Hypertarget{_tasks_8h_af29f1785a18e7a1a2e765fe10a97865d}\index{Tasks.h@{Tasks.h}!taskEncenderLedB@{taskEncenderLedB}}
+\index{taskEncenderLedB@{taskEncenderLedB}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskEncenderLedB}{taskEncenderLedB}}
+{\footnotesize\ttfamily \label{_tasks_8h_af29f1785a18e7a1a2e765fe10a97865d} 
+Async\+Task task\+Encender\+LedB\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Tarea encargada del parpadeo del LED azul cuando el sistema está en estado de alerta. 
+
+\Hypertarget{_tasks_8h_a683384869bf5f947a52a4bde6745679c}\index{Tasks.h@{Tasks.h}!taskEncenderLedG@{taskEncenderLedG}}
+\index{taskEncenderLedG@{taskEncenderLedG}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskEncenderLedG}{taskEncenderLedG}}
+{\footnotesize\ttfamily \label{_tasks_8h_a683384869bf5f947a52a4bde6745679c} 
+Async\+Task task\+Encender\+LedG\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Tarea encargada del parpadeo del LED verde en el estado inicial. 
+
+\Hypertarget{_tasks_8h_a6811b36cdd04265d91531a526e916465}\index{Tasks.h@{Tasks.h}!taskEncenderLedR@{taskEncenderLedR}}
+\index{taskEncenderLedR@{taskEncenderLedR}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskEncenderLedR}{taskEncenderLedR}}
+{\footnotesize\ttfamily \label{_tasks_8h_a6811b36cdd04265d91531a526e916465} 
+Async\+Task task\+Encender\+LedR\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Tarea encargada del parpadeo del LED rojo cuando el sistema está en estado de alarma. 
+
+\Hypertarget{_tasks_8h_a05f09f0bbcf62aa3441e325ee6424f2c}\index{Tasks.h@{Tasks.h}!taskEnviar@{taskEnviar}}
+\index{taskEnviar@{taskEnviar}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskEnviar}{taskEnviar}}
+{\footnotesize\ttfamily \label{_tasks_8h_a05f09f0bbcf62aa3441e325ee6424f2c} 
+Async\+Task task\+Enviar\hspace{0.3cm}{\ttfamily [extern]}}
+
+Tarea encargada de procesar los datos de sensores, calcular promedios y generar eventos para la máquina de estados. \Hypertarget{_tasks_8h_a23523747c90863a48a8f98e756061426}\index{Tasks.h@{Tasks.h}!taskFlama@{taskFlama}}
+\index{taskFlama@{taskFlama}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskFlama}{taskFlama}}
+{\footnotesize\ttfamily \label{_tasks_8h_a23523747c90863a48a8f98e756061426} 
+Async\+Task task\+Flama\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Tarea encargada de leer periódicamente el sensor de flama. 
+
+\Hypertarget{_tasks_8h_a07c21fcab016d7fce8d80c4d9e5c2a98}\index{Tasks.h@{Tasks.h}!taskLeerHum@{taskLeerHum}}
+\index{taskLeerHum@{taskLeerHum}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskLeerHum}{taskLeerHum}}
+{\footnotesize\ttfamily \label{_tasks_8h_a07c21fcab016d7fce8d80c4d9e5c2a98} 
+Async\+Task task\+Leer\+Hum\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Tarea encargada de leer muestras del sensor de humedad del DHT. 
+
+\Hypertarget{_tasks_8h_a6cc696b7a7f75e04c9a572f937e83aea}\index{Tasks.h@{Tasks.h}!taskLeerLuz@{taskLeerLuz}}
+\index{taskLeerLuz@{taskLeerLuz}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskLeerLuz}{taskLeerLuz}}
+{\footnotesize\ttfamily \label{_tasks_8h_a6cc696b7a7f75e04c9a572f937e83aea} 
+Async\+Task task\+Leer\+Luz\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Tarea encargada de leer muestras del sensor de luz (LDR). 
+
+\Hypertarget{_tasks_8h_a920072031675c1d1edf8f1371eaa3dc0}\index{Tasks.h@{Tasks.h}!taskLeerTem@{taskLeerTem}}
+\index{taskLeerTem@{taskLeerTem}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskLeerTem}{taskLeerTem}}
+{\footnotesize\ttfamily \label{_tasks_8h_a920072031675c1d1edf8f1371eaa3dc0} 
+Async\+Task task\+Leer\+Tem\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Tarea encargada de leer muestras del sensor de temperatura del DHT. 
+
+\Hypertarget{_tasks_8h_a6a72a819daef6ab810a8eb5b683b4057}\index{Tasks.h@{Tasks.h}!taskT2@{taskT2}}
+\index{taskT2@{taskT2}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskT2}{taskT2}}
+{\footnotesize\ttfamily \label{_tasks_8h_a6a72a819daef6ab810a8eb5b683b4057} 
+Async\+Task task\+T2\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Temporizador T2 utilizado para habilitar ciertas transiciones dentro de la máquina de estados. 
+
+\Hypertarget{_tasks_8h_a9566bf61e6dc06c464dd17efffd44291}\index{Tasks.h@{Tasks.h}!taskT3@{taskT3}}
+\index{taskT3@{taskT3}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskT3}{taskT3}}
+{\footnotesize\ttfamily \label{_tasks_8h_a9566bf61e6dc06c464dd17efffd44291} 
+Async\+Task task\+T3\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Temporizador T3 utilizado para controlar tiempos de permanencia en ciertos estados. 
+
+\Hypertarget{_tasks_8h_a43401ed25496ca400b6b09b688fc4df0}\index{Tasks.h@{Tasks.h}!taskT4@{taskT4}}
+\index{taskT4@{taskT4}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskT4}{taskT4}}
+{\footnotesize\ttfamily \label{_tasks_8h_a43401ed25496ca400b6b09b688fc4df0} 
+Async\+Task task\+T4\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Temporizador T4 utilizado para generar eventos temporales en el monitoreo del sistema. 
+
+\Hypertarget{_tasks_8h_a6c17ce55db16d729744c5b8f7e2edfe0}\index{Tasks.h@{Tasks.h}!taskT5@{taskT5}}
+\index{taskT5@{taskT5}!Tasks.h@{Tasks.h}}
+\doxysubsubsection{\texorpdfstring{taskT5}{taskT5}}
+{\footnotesize\ttfamily \label{_tasks_8h_a6c17ce55db16d729744c5b8f7e2edfe0} 
+Async\+Task task\+T5\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Temporizador T5 utilizado para generar transiciones de estado basadas en tiempo. 
+

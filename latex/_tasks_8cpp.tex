@@ -1,0 +1,115 @@
+\doxysection{maquina\+Estados/\+\+Tasks.cpp File Reference}
+\hypertarget{_tasks_8cpp}{}\label{_tasks_8cpp}\index{maquinaEstados/Tasks.cpp@{maquinaEstados/Tasks.cpp}}
+{\ttfamily \+\#include "{}Tasks.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8cpp_a888ebec9fbb24932ab3bca8780fe94c7}{task\+Encender\+LedG}} (\doxymbox{\hyperlink{_tasks_8h_a874e38df4bbcdc629a75071598fcbdc2}{LED\+\_\+\+G\+\_\+\+PERIOD}}, true, \+[$\,$]\+() \{ \doxymbox{\hyperlink{_sensors_8cpp_a373ff89b9ecde70ce62baf8917e6cafc}{green\+Led}}();\})
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8cpp_a36783ea013d061bb4c66863568b46c10}{task\+Encender\+LedB}} (\doxymbox{\hyperlink{_tasks_8h_a3f477a18f780b528bf6f959c87dc7d69}{LED\+\_\+\+B\+\_\+\+PERIOD}}, true, \+[$\,$]\+() \{ \doxymbox{\hyperlink{_sensors_8cpp_ae737b5900993633963844e57da82e877}{blue\+Led}}();\})
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8cpp_a80c9cea5dab1094673da86ecb1f9e682}{task\+Encender\+LedR}} (\doxymbox{\hyperlink{_tasks_8h_a2dab6b1a8f14c0b03889e711bb6aa277}{LED\+\_\+\+R\+\_\+\+PERIOD}}, true, \+[$\,$]\+() \{ \doxymbox{\hyperlink{_sensors_8cpp_ae786258783b580e4c5ae79349a7610ce}{red\+Led}}();\})
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8cpp_acbd4d91e7b275eac4a371ccdc47baa39}{task\+T5}} (\doxymbox{\hyperlink{_tasks_8h_a3558d9637c00c36cd3768c1939889ad9}{T5\+\_\+\+PERIOD}}, true, \+[$\,$]\+() \{ \doxymbox{\hyperlink{_sensors_8cpp_a178c3513fa869c7ec13922e5d6edc54e}{Done\+T5}}();\})
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8cpp_aae6b466ea61a043ffd9133a373a79423}{task\+T3}} (\doxymbox{\hyperlink{_tasks_8h_aed18f7722f07b5e8a49b2c11599c69ff}{T3\+\_\+\+PERIOD}}, true, \+[$\,$]\+() \{ \doxymbox{\hyperlink{_sensors_8cpp_a2edb72f8002dfdf6a47e29b9fbb3386b}{Done\+T3}}();\})
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8cpp_a0f637247d0a499f67b480efd33778568}{task\+T2}} (\doxymbox{\hyperlink{_tasks_8h_ab962e25a153041c05710d942fda48041}{T2\+\_\+\+PERIOD}}, true, \+[$\,$]\+() \{ \doxymbox{\hyperlink{_sensors_8cpp_acf428ebb6a95dc57e1d88aae52e87f1c}{Done\+T2}}();\})
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8cpp_a921360b07b96baa7b0329a49353043b4}{task\+T4}} (\doxymbox{\hyperlink{_tasks_8h_adfaf716753fa25473a6f1c7b42497e5e}{T4\+\_\+\+PERIOD}}, true, \+[$\,$]\+() \{ \doxymbox{\hyperlink{_sensors_8cpp_a582ef6f1c8ab466ec60a863eb8c145a2}{Done\+T4}}();\})
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8cpp_a4a67ddcb5150786b71508d6f094009ba}{task\+Flama}} (\doxymbox{\hyperlink{_tasks_8h_aa8585c77ffe0287457fe864dda9a0ee5}{FLAMA\+\_\+\+PERIOD}}, true, \+[$\,$]\+() \{ \doxymbox{\hyperlink{_sensors_8cpp_ae76281e3566d0780e30c862d5571f230}{leer\+Flama}}();\})
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8cpp_ae8fa1504446c4e0280500ab9f2ca9ea9}{task\+Leer\+Luz}} (\doxymbox{\hyperlink{_tasks_8h_aa827f6c0b31edd3565475c5d3db4a1e2}{LUZ\+\_\+\+READ\+\_\+\+PERIOD}}, true, \+[$\,$]\+() \{ \doxymbox{\hyperlink{_sensors_8cpp_a98993bd9518accad2334894aa0e29c03}{leer\+Luz}}();\})
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8cpp_aa65e7ffff3fe9cfbeb928c60694ff15a}{task\+Leer\+Tem}} (\doxymbox{\hyperlink{_tasks_8h_adfdba6b1ef0b2933e3512063c320fc39}{TEMP\+\_\+\+READ\+\_\+\+PERIOD}}, true, \+[$\,$]\+() \{ \doxymbox{\hyperlink{_sensors_8cpp_a7017b32a6b39633ada391cbca2596280}{leer\+Tem}}();\})
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8cpp_ac0b02313ee5f2e9afce0c7dbf2323908}{task\+Leer\+Hum}} (\doxymbox{\hyperlink{_tasks_8h_aa3ac60648884aae45e246d3f83c6931a}{HUM\+\_\+\+READ\+\_\+\+PERIOD}}, true, \+[$\,$]\+() \{ \doxymbox{\hyperlink{_sensors_8cpp_ad0e1d4b65f6d8d245c6fef945dddbbad}{leer\+Hum}}();\})
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8cpp_a0a1a0d10461ca8f7e222e4f9d7866264}{task\+Enviar}} (\doxymbox{\hyperlink{_tasks_8h_a0391b411c24490db6a0d9cac41338538}{SEND\+\_\+\+PERIOD}}, true, \+[$\,$]\+() \{ \doxymbox{\hyperlink{_sensors_8cpp_ad741455ad7233a505a8a3ffe1e3eedae}{enviar\+Datos}}();\})
+\item 
+Async\+Task \doxymbox{\hyperlink{_tasks_8cpp_ad95b80a2372a9356002fb5f81792e6d4}{task\+Boton}} (\doxymbox{\hyperlink{_tasks_8h_aec9881842dca89bd8ae34560701277ab}{BTN\+\_\+\+PERIOD}}, true, \+[$\,$]\+() \{ \doxymbox{\hyperlink{_sensors_8cpp_a30508afb2a5d449e5e78f86474907d55}{leer\+Boton}}();\})
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_tasks_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_tasks_8cpp_ad95b80a2372a9356002fb5f81792e6d4}\index{Tasks.cpp@{Tasks.cpp}!taskBoton@{taskBoton}}
+\index{taskBoton@{taskBoton}!Tasks.cpp@{Tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskBoton()}{taskBoton()}}
+{\footnotesize\ttfamily \label{_tasks_8cpp_ad95b80a2372a9356002fb5f81792e6d4} 
+Async\+Task task\+Boton (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_tasks_8h_aec9881842dca89bd8ae34560701277ab}{BTN\+\_\+\+PERIOD}}}]{}{, }\item[{true}]{}{, }\item[{\+[$\,$]\+ () \{ \doxymbox{\hyperlink{_sensors_8cpp_a30508afb2a5d449e5e78f86474907d55}{leer\+Boton}}();\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_tasks_8cpp_a36783ea013d061bb4c66863568b46c10}\index{Tasks.cpp@{Tasks.cpp}!taskEncenderLedB@{taskEncenderLedB}}
+\index{taskEncenderLedB@{taskEncenderLedB}!Tasks.cpp@{Tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskEncenderLedB()}{taskEncenderLedB()}}
+{\footnotesize\ttfamily \label{_tasks_8cpp_a36783ea013d061bb4c66863568b46c10} 
+Async\+Task task\+Encender\+LedB (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_tasks_8h_a3f477a18f780b528bf6f959c87dc7d69}{LED\+\_\+\+B\+\_\+\+PERIOD}}}]{}{, }\item[{true}]{}{, }\item[{\+[$\,$]\+ () \{ \doxymbox{\hyperlink{_sensors_8cpp_ae737b5900993633963844e57da82e877}{blue\+Led}}();\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_tasks_8cpp_a888ebec9fbb24932ab3bca8780fe94c7}\index{Tasks.cpp@{Tasks.cpp}!taskEncenderLedG@{taskEncenderLedG}}
+\index{taskEncenderLedG@{taskEncenderLedG}!Tasks.cpp@{Tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskEncenderLedG()}{taskEncenderLedG()}}
+{\footnotesize\ttfamily \label{_tasks_8cpp_a888ebec9fbb24932ab3bca8780fe94c7} 
+Async\+Task task\+Encender\+LedG (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_tasks_8h_a874e38df4bbcdc629a75071598fcbdc2}{LED\+\_\+\+G\+\_\+\+PERIOD}}}]{}{, }\item[{true}]{}{, }\item[{\+[$\,$]\+ () \{ \doxymbox{\hyperlink{_sensors_8cpp_a373ff89b9ecde70ce62baf8917e6cafc}{green\+Led}}();\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_tasks_8cpp_a80c9cea5dab1094673da86ecb1f9e682}\index{Tasks.cpp@{Tasks.cpp}!taskEncenderLedR@{taskEncenderLedR}}
+\index{taskEncenderLedR@{taskEncenderLedR}!Tasks.cpp@{Tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskEncenderLedR()}{taskEncenderLedR()}}
+{\footnotesize\ttfamily \label{_tasks_8cpp_a80c9cea5dab1094673da86ecb1f9e682} 
+Async\+Task task\+Encender\+LedR (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_tasks_8h_a2dab6b1a8f14c0b03889e711bb6aa277}{LED\+\_\+\+R\+\_\+\+PERIOD}}}]{}{, }\item[{true}]{}{, }\item[{\+[$\,$]\+ () \{ \doxymbox{\hyperlink{_sensors_8cpp_ae786258783b580e4c5ae79349a7610ce}{red\+Led}}();\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_tasks_8cpp_a0a1a0d10461ca8f7e222e4f9d7866264}\index{Tasks.cpp@{Tasks.cpp}!taskEnviar@{taskEnviar}}
+\index{taskEnviar@{taskEnviar}!Tasks.cpp@{Tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskEnviar()}{taskEnviar()}}
+{\footnotesize\ttfamily \label{_tasks_8cpp_a0a1a0d10461ca8f7e222e4f9d7866264} 
+Async\+Task task\+Enviar (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_tasks_8h_a0391b411c24490db6a0d9cac41338538}{SEND\+\_\+\+PERIOD}}}]{}{, }\item[{true}]{}{, }\item[{\+[$\,$]\+ () \{ \doxymbox{\hyperlink{_sensors_8cpp_ad741455ad7233a505a8a3ffe1e3eedae}{enviar\+Datos}}();\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_tasks_8cpp_a4a67ddcb5150786b71508d6f094009ba}\index{Tasks.cpp@{Tasks.cpp}!taskFlama@{taskFlama}}
+\index{taskFlama@{taskFlama}!Tasks.cpp@{Tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskFlama()}{taskFlama()}}
+{\footnotesize\ttfamily \label{_tasks_8cpp_a4a67ddcb5150786b71508d6f094009ba} 
+Async\+Task task\+Flama (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_tasks_8h_aa8585c77ffe0287457fe864dda9a0ee5}{FLAMA\+\_\+\+PERIOD}}}]{}{, }\item[{true}]{}{, }\item[{\+[$\,$]\+ () \{ \doxymbox{\hyperlink{_sensors_8cpp_ae76281e3566d0780e30c862d5571f230}{leer\+Flama}}();\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_tasks_8cpp_ac0b02313ee5f2e9afce0c7dbf2323908}\index{Tasks.cpp@{Tasks.cpp}!taskLeerHum@{taskLeerHum}}
+\index{taskLeerHum@{taskLeerHum}!Tasks.cpp@{Tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskLeerHum()}{taskLeerHum()}}
+{\footnotesize\ttfamily \label{_tasks_8cpp_ac0b02313ee5f2e9afce0c7dbf2323908} 
+Async\+Task task\+Leer\+Hum (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_tasks_8h_aa3ac60648884aae45e246d3f83c6931a}{HUM\+\_\+\+READ\+\_\+\+PERIOD}}}]{}{, }\item[{true}]{}{, }\item[{\+[$\,$]\+ () \{ \doxymbox{\hyperlink{_sensors_8cpp_ad0e1d4b65f6d8d245c6fef945dddbbad}{leer\+Hum}}();\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_tasks_8cpp_ae8fa1504446c4e0280500ab9f2ca9ea9}\index{Tasks.cpp@{Tasks.cpp}!taskLeerLuz@{taskLeerLuz}}
+\index{taskLeerLuz@{taskLeerLuz}!Tasks.cpp@{Tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskLeerLuz()}{taskLeerLuz()}}
+{\footnotesize\ttfamily \label{_tasks_8cpp_ae8fa1504446c4e0280500ab9f2ca9ea9} 
+Async\+Task task\+Leer\+Luz (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_tasks_8h_aa827f6c0b31edd3565475c5d3db4a1e2}{LUZ\+\_\+\+READ\+\_\+\+PERIOD}}}]{}{, }\item[{true}]{}{, }\item[{\+[$\,$]\+ () \{ \doxymbox{\hyperlink{_sensors_8cpp_a98993bd9518accad2334894aa0e29c03}{leer\+Luz}}();\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_tasks_8cpp_aa65e7ffff3fe9cfbeb928c60694ff15a}\index{Tasks.cpp@{Tasks.cpp}!taskLeerTem@{taskLeerTem}}
+\index{taskLeerTem@{taskLeerTem}!Tasks.cpp@{Tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskLeerTem()}{taskLeerTem()}}
+{\footnotesize\ttfamily \label{_tasks_8cpp_aa65e7ffff3fe9cfbeb928c60694ff15a} 
+Async\+Task task\+Leer\+Tem (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_tasks_8h_adfdba6b1ef0b2933e3512063c320fc39}{TEMP\+\_\+\+READ\+\_\+\+PERIOD}}}]{}{, }\item[{true}]{}{, }\item[{\+[$\,$]\+ () \{ \doxymbox{\hyperlink{_sensors_8cpp_a7017b32a6b39633ada391cbca2596280}{leer\+Tem}}();\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_tasks_8cpp_a0f637247d0a499f67b480efd33778568}\index{Tasks.cpp@{Tasks.cpp}!taskT2@{taskT2}}
+\index{taskT2@{taskT2}!Tasks.cpp@{Tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskT2()}{taskT2()}}
+{\footnotesize\ttfamily \label{_tasks_8cpp_a0f637247d0a499f67b480efd33778568} 
+Async\+Task task\+T2 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_tasks_8h_ab962e25a153041c05710d942fda48041}{T2\+\_\+\+PERIOD}}}]{}{, }\item[{true}]{}{, }\item[{\+[$\,$]\+ () \{ \doxymbox{\hyperlink{_sensors_8cpp_acf428ebb6a95dc57e1d88aae52e87f1c}{Done\+T2}}();\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_tasks_8cpp_aae6b466ea61a043ffd9133a373a79423}\index{Tasks.cpp@{Tasks.cpp}!taskT3@{taskT3}}
+\index{taskT3@{taskT3}!Tasks.cpp@{Tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskT3()}{taskT3()}}
+{\footnotesize\ttfamily \label{_tasks_8cpp_aae6b466ea61a043ffd9133a373a79423} 
+Async\+Task task\+T3 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_tasks_8h_aed18f7722f07b5e8a49b2c11599c69ff}{T3\+\_\+\+PERIOD}}}]{}{, }\item[{true}]{}{, }\item[{\+[$\,$]\+ () \{ \doxymbox{\hyperlink{_sensors_8cpp_a2edb72f8002dfdf6a47e29b9fbb3386b}{Done\+T3}}();\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_tasks_8cpp_a921360b07b96baa7b0329a49353043b4}\index{Tasks.cpp@{Tasks.cpp}!taskT4@{taskT4}}
+\index{taskT4@{taskT4}!Tasks.cpp@{Tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskT4()}{taskT4()}}
+{\footnotesize\ttfamily \label{_tasks_8cpp_a921360b07b96baa7b0329a49353043b4} 
+Async\+Task task\+T4 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_tasks_8h_adfaf716753fa25473a6f1c7b42497e5e}{T4\+\_\+\+PERIOD}}}]{}{, }\item[{true}]{}{, }\item[{\+[$\,$]\+ () \{ \doxymbox{\hyperlink{_sensors_8cpp_a582ef6f1c8ab466ec60a863eb8c145a2}{Done\+T4}}();\}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_tasks_8cpp_acbd4d91e7b275eac4a371ccdc47baa39}\index{Tasks.cpp@{Tasks.cpp}!taskT5@{taskT5}}
+\index{taskT5@{taskT5}!Tasks.cpp@{Tasks.cpp}}
+\doxysubsubsection{\texorpdfstring{taskT5()}{taskT5()}}
+{\footnotesize\ttfamily \label{_tasks_8cpp_acbd4d91e7b275eac4a371ccdc47baa39} 
+Async\+Task task\+T5 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_tasks_8h_a3558d9637c00c36cd3768c1939889ad9}{T5\+\_\+\+PERIOD}}}]{}{, }\item[{true}]{}{, }\item[{\+[$\,$]\+ () \{ \doxymbox{\hyperlink{_sensors_8cpp_a178c3513fa869c7ec13922e5d6edc54e}{Done\+T5}}();\}}]{}{}\end{DoxyParamCaption})}
+

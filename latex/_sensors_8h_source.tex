@@ -1,0 +1,74 @@
+\doxysection{Sensors.\+h}
+\hypertarget{_sensors_8h_source}{}\label{_sensors_8h_source}\index{maquinaEstados/Sensors.h@{maquinaEstados/Sensors.h}}
+\doxymbox{\hyperlink{_sensors_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SENSORS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SENSORS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_pinout_8h}{Pinout.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <DHT.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{_sensors_8h_a5667b805d857c6d28f83f6038a0272d3}{Event}}\{}
+\DoxyCodeLine{00009\ \ \ \doxymbox{\hyperlink{_sensors_8h_a5667b805d857c6d28f83f6038a0272d3a64b80c35697d7ac8649129974f97cf2a}{DEFECTO}}\ =\ 0,}
+\DoxyCodeLine{00010\ \ \ \doxymbox{\hyperlink{_sensors_8h_a5667b805d857c6d28f83f6038a0272d3adf4b9d36237140222420c439b4ae5e32}{BOTON}},}
+\DoxyCodeLine{00011\ \ \ \doxymbox{\hyperlink{_sensors_8h_a5667b805d857c6d28f83f6038a0272d3a35c1f0246926a74f9f15e1901ff44bb7}{FLAMA}},}
+\DoxyCodeLine{00012\ \ \ \doxymbox{\hyperlink{_sensors_8h_a5667b805d857c6d28f83f6038a0272d3ae717ed95ca7b816fc49ccf1fbc9e3590}{TEMPERATURA}},}
+\DoxyCodeLine{00013\ \ \ \doxymbox{\hyperlink{_sensors_8h_a5667b805d857c6d28f83f6038a0272d3a3ca7956d3f188d26a11dc3072a355cc4}{HUMEDAD}},}
+\DoxyCodeLine{00014\ \ \ \doxymbox{\hyperlink{_sensors_8h_a5667b805d857c6d28f83f6038a0272d3a6419a63e34e7b411198428c3b99a7abc}{LUZ}}}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{_sensors_8h_a5667b805d857c6d28f83f6038a0272d3}{Event}}\ \doxymbox{\hyperlink{_sensors_8h_a1c562f59a8e71086b25cf317187a493d}{eventoActual}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ Variables\ compartidas\ de\ sensores}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{_sensors_8h_ad43bbd53ee15610b1c213b0b6412d175}{ledState}};}
+\DoxyCodeLine{00021\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_sensors_8h_af32860157374b2d805053ced810b3ae8}{conteoAlerta}};}
+\DoxyCodeLine{00022\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{_sensors_8cpp_ae01b7a7e497e44eda2aa347c0a359f6e}{muestraFlama}};}
+\DoxyCodeLine{00023\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{_sensors_8h_a26913be1f15b61d8899632a65d5f742f}{t5}};}
+\DoxyCodeLine{00024\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{_sensors_8h_a359420375435ccbfb851dac8a64930df}{t3}};}
+\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{_sensors_8h_a5ebc4b84676325e0e82020e2cda1e755}{t2}};}
+\DoxyCodeLine{00026\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{_sensors_8h_a9e20be97db928ff7847dbc094be3f4a1}{t4}};}
+\DoxyCodeLine{00027\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{_sensors_8h_ae368118cec7411d55f3a7479da7e6292}{luz}};}
+\DoxyCodeLine{00028\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{_sensors_8h_aa60bd5b3e23091e3f90eb50edcf8a592}{tem1}};}
+\DoxyCodeLine{00029\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{_sensors_8h_aee518aa077b13f6bb607e575242d1c6b}{tem2}};}
+\DoxyCodeLine{00030\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{_sensors_8h_ad7d6f6d9d9b5f457c4f0f710bb3e8034}{hum1}};}
+\DoxyCodeLine{00031\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{_sensors_8h_a01387de8a99edc18c6e60b110dd93631}{hum2}};}
+\DoxyCodeLine{00032\ \textcolor{keyword}{extern}\ DHT\ \doxymbox{\hyperlink{_sensors_8h_a36deb824329db8b719c4f8f2ca8e83cc}{dht}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ Funciones\ de\ los\ diferentes\ sensores\ y\ procesos\ complementarios}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_sensors_8h_a373ff89b9ecde70ce62baf8917e6cafc}{greenLed}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_sensors_8h_ae737b5900993633963844e57da82e877}{blueLed}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_sensors_8h_ae786258783b580e4c5ae79349a7610ce}{redLed}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ Transiciones\ de\ tiempo}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_sensors_8h_a178c3513fa869c7ec13922e5d6edc54e}{DoneT5}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00076\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_sensors_8h_a2edb72f8002dfdf6a47e29b9fbb3386b}{DoneT3}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00084\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_sensors_8h_acf428ebb6a95dc57e1d88aae52e87f1c}{DoneT2}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_sensors_8h_a582ef6f1c8ab466ec60a863eb8c145a2}{DoneT4}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00100\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_sensors_8h_ae76281e3566d0780e30c862d5571f230}{leerFlama}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{comment}{//\ Funciones\ del\ sensor\ de\ luz}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00110\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_sensors_8h_a98993bd9518accad2334894aa0e29c03}{leerLuz}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00118\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_sensors_8h_afdda71398c0c87e414841fa7a52bf926}{enviarLuz}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00126\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_sensors_8h_a7017b32a6b39633ada391cbca2596280}{leerTem}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00134\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_sensors_8h_ad0e1d4b65f6d8d245c6fef945dddbbad}{leerHum}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00143\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_sensors_8h_ad741455ad7233a505a8a3ffe1e3eedae}{enviarDatos}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00151\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{_sensors_8h_a30508afb2a5d449e5e78f86474907d55}{leerBoton}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
