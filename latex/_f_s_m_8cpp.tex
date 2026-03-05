@@ -1,0 +1,176 @@
+\doxysection{maquina\+Estados/\+\+FSM.cpp File Reference}
+\hypertarget{_f_s_m_8cpp}{}\label{_f_s_m_8cpp}\index{maquinaEstados/FSM.cpp@{maquinaEstados/FSM.cpp}}
+{\ttfamily \+\#include "{}FSM.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+State\+Machine \doxymbox{\hyperlink{_f_s_m_8cpp_a1820cf1194ef9567c486d5a6728ab944}{machine}} (6, 11)
+\item 
+void \doxymbox{\hyperlink{_f_s_m_8cpp_a29a6e5677a66c39494d71f31fe0dc380}{on\+Inicio}} ()
+\begin{DoxyCompactList}\small\item\em Callback de entrada al estado INICIO. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_f_s_m_8cpp_a939683288243366ae36e359a701dab51}{off\+Inicio}} ()
+\begin{DoxyCompactList}\small\item\em Callback de salida del estado INICIO. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_f_s_m_8cpp_a74e3626f6e259ef322c2033f5bb7803b}{on\+Montem}} ()
+\begin{DoxyCompactList}\small\item\em Callback de entrada al estado MONTEM. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_f_s_m_8cpp_ae37f53aa1ef6b24467be76aebfd58451}{off\+Montem}} ()
+\begin{DoxyCompactList}\small\item\em Callback de salida del estado MONTEM. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_f_s_m_8cpp_a0e81c990e2c4dc23e5e9c05693e18631}{on\+Monhum}} ()
+\begin{DoxyCompactList}\small\item\em Callback de entrada al estado MONHUM. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_f_s_m_8cpp_a06c8757a20bd17488539d275f3861fa8}{off\+Monhum}} ()
+\begin{DoxyCompactList}\small\item\em Callback de salida del estado MONHUM. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_f_s_m_8cpp_a7b8c39e7957dd3ff214b6dfc1c2e1ef3}{on\+Monluz}} ()
+\begin{DoxyCompactList}\small\item\em Callback de entrada al estado MONLUZ. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_f_s_m_8cpp_afefc46abd4c8c401b2150a2fea71ba87}{off\+Monluz}} ()
+\begin{DoxyCompactList}\small\item\em Callback de salida del estado MONLUZ. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_f_s_m_8cpp_a31a903ae77b1c66510350b7921c8f186}{on\+Alerta}} ()
+\begin{DoxyCompactList}\small\item\em Callback de entrada al estado ALERTA. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_f_s_m_8cpp_acc90afaf828758d6f00e5b13b26f3e2e}{off\+Alerta}} ()
+\begin{DoxyCompactList}\small\item\em Callback de salida del estado ALERTA. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_f_s_m_8cpp_a9da3e66770049773a182abe0888570be}{on\+Alarma}} ()
+\begin{DoxyCompactList}\small\item\em Callback de entrada al estado ALARMA. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_f_s_m_8cpp_a25d7b6df2f56499184960533f585e3d3}{off\+Alarma}} ()
+\begin{DoxyCompactList}\small\item\em Callback de salida del estado ALARMA. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_f_s_m_8cpp_aca804055d6a8f7784fecbd5c872a8e04}{setup\+Machine}} ()
+\begin{DoxyCompactList}\small\item\em Configura la máquina de estados del sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{_f_s_m_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_f_s_m_8cpp_a1820cf1194ef9567c486d5a6728ab944}\index{FSM.cpp@{FSM.cpp}!machine@{machine}}
+\index{machine@{machine}!FSM.cpp@{FSM.cpp}}
+\doxysubsubsection{\texorpdfstring{machine()}{machine()}}
+{\footnotesize\ttfamily \label{_f_s_m_8cpp_a1820cf1194ef9567c486d5a6728ab944} 
+State\+Machine machine (\begin{DoxyParamCaption}\item[{6}]{}{, }\item[{11}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_f_s_m_8cpp_a25d7b6df2f56499184960533f585e3d3}\index{FSM.cpp@{FSM.cpp}!offAlarma@{offAlarma}}
+\index{offAlarma@{offAlarma}!FSM.cpp@{FSM.cpp}}
+\doxysubsubsection{\texorpdfstring{offAlarma()}{offAlarma()}}
+{\footnotesize\ttfamily \label{_f_s_m_8cpp_a25d7b6df2f56499184960533f585e3d3} 
+void off\+Alarma (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Callback de salida del estado ALARMA. 
+
+Detiene los actuadores de emergencia, reinicia el contador de alertas y limpia el evento actual antes de regresar al estado inicial. \Hypertarget{_f_s_m_8cpp_acc90afaf828758d6f00e5b13b26f3e2e}\index{FSM.cpp@{FSM.cpp}!offAlerta@{offAlerta}}
+\index{offAlerta@{offAlerta}!FSM.cpp@{FSM.cpp}}
+\doxysubsubsection{\texorpdfstring{offAlerta()}{offAlerta()}}
+{\footnotesize\ttfamily \label{_f_s_m_8cpp_acc90afaf828758d6f00e5b13b26f3e2e} 
+void off\+Alerta (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Callback de salida del estado ALERTA. 
+
+Detiene el parpadeo del LED azul y reinicia las variables utilizadas durante la condición de alerta. \Hypertarget{_f_s_m_8cpp_a939683288243366ae36e359a701dab51}\index{FSM.cpp@{FSM.cpp}!offInicio@{offInicio}}
+\index{offInicio@{offInicio}!FSM.cpp@{FSM.cpp}}
+\doxysubsubsection{\texorpdfstring{offInicio()}{offInicio()}}
+{\footnotesize\ttfamily \label{_f_s_m_8cpp_a939683288243366ae36e359a701dab51} 
+void off\+Inicio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Callback de salida del estado INICIO. 
+
+Detiene las tareas asociadas al estado inicial, apaga el LED verde y limpia el evento actual para evitar transiciones no deseadas. \Hypertarget{_f_s_m_8cpp_a06c8757a20bd17488539d275f3861fa8}\index{FSM.cpp@{FSM.cpp}!offMonhum@{offMonhum}}
+\index{offMonhum@{offMonhum}!FSM.cpp@{FSM.cpp}}
+\doxysubsubsection{\texorpdfstring{offMonhum()}{offMonhum()}}
+{\footnotesize\ttfamily \label{_f_s_m_8cpp_a06c8757a20bd17488539d275f3861fa8} 
+void off\+Monhum (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Callback de salida del estado MONHUM. 
+
+Detiene las tareas de monitoreo de humedad y reinicia las variables asociadas a este sensor. \Hypertarget{_f_s_m_8cpp_afefc46abd4c8c401b2150a2fea71ba87}\index{FSM.cpp@{FSM.cpp}!offMonluz@{offMonluz}}
+\index{offMonluz@{offMonluz}!FSM.cpp@{FSM.cpp}}
+\doxysubsubsection{\texorpdfstring{offMonluz()}{offMonluz()}}
+{\footnotesize\ttfamily \label{_f_s_m_8cpp_afefc46abd4c8c401b2150a2fea71ba87} 
+void off\+Monluz (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Callback de salida del estado MONLUZ. 
+
+Detiene las tareas relacionadas con el sensor de luz y reinicia las variables utilizadas para el monitoreo. \Hypertarget{_f_s_m_8cpp_ae37f53aa1ef6b24467be76aebfd58451}\index{FSM.cpp@{FSM.cpp}!offMontem@{offMontem}}
+\index{offMontem@{offMontem}!FSM.cpp@{FSM.cpp}}
+\doxysubsubsection{\texorpdfstring{offMontem()}{offMontem()}}
+{\footnotesize\ttfamily \label{_f_s_m_8cpp_ae37f53aa1ef6b24467be76aebfd58451} 
+void off\+Montem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Callback de salida del estado MONTEM. 
+
+Detiene las tareas relacionadas con el monitoreo de temperatura y restablece variables de control para evitar condiciones residuales. \Hypertarget{_f_s_m_8cpp_a9da3e66770049773a182abe0888570be}\index{FSM.cpp@{FSM.cpp}!onAlarma@{onAlarma}}
+\index{onAlarma@{onAlarma}!FSM.cpp@{FSM.cpp}}
+\doxysubsubsection{\texorpdfstring{onAlarma()}{onAlarma()}}
+{\footnotesize\ttfamily \label{_f_s_m_8cpp_a9da3e66770049773a182abe0888570be} 
+void on\+Alarma (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Callback de entrada al estado ALARMA. 
+
+Activa el parpadeo del LED rojo para indicar una condición crítica y habilita nuevamente el botón para permitir reiniciar el sistema. \Hypertarget{_f_s_m_8cpp_a31a903ae77b1c66510350b7921c8f186}\index{FSM.cpp@{FSM.cpp}!onAlerta@{onAlerta}}
+\index{onAlerta@{onAlerta}!FSM.cpp@{FSM.cpp}}
+\doxysubsubsection{\texorpdfstring{onAlerta()}{onAlerta()}}
+{\footnotesize\ttfamily \label{_f_s_m_8cpp_a31a903ae77b1c66510350b7921c8f186} 
+void on\+Alerta (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Callback de entrada al estado ALERTA. 
+
+Incrementa el contador de alertas, activa el parpadeo del LED azul y continúa monitoreando la temperatura para determinar si se debe escalar al estado de alarma. \Hypertarget{_f_s_m_8cpp_a29a6e5677a66c39494d71f31fe0dc380}\index{FSM.cpp@{FSM.cpp}!onInicio@{onInicio}}
+\index{onInicio@{onInicio}!FSM.cpp@{FSM.cpp}}
+\doxysubsubsection{\texorpdfstring{onInicio()}{onInicio()}}
+{\footnotesize\ttfamily \label{_f_s_m_8cpp_a29a6e5677a66c39494d71f31fe0dc380} 
+void on\+Inicio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Callback de entrada al estado INICIO. 
+
+Activa el parpadeo del LED verde y habilita la tarea de lectura del botón. Este estado representa la condición inicial del sistema. \Hypertarget{_f_s_m_8cpp_a0e81c990e2c4dc23e5e9c05693e18631}\index{FSM.cpp@{FSM.cpp}!onMonhum@{onMonhum}}
+\index{onMonhum@{onMonhum}!FSM.cpp@{FSM.cpp}}
+\doxysubsubsection{\texorpdfstring{onMonhum()}{onMonhum()}}
+{\footnotesize\ttfamily \label{_f_s_m_8cpp_a0e81c990e2c4dc23e5e9c05693e18631} 
+void on\+Monhum (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Callback de entrada al estado MONHUM. 
+
+Activa el monitoreo del sensor de humedad y el temporizador asociado para controlar el tiempo de permanencia en este estado. \Hypertarget{_f_s_m_8cpp_a7b8c39e7957dd3ff214b6dfc1c2e1ef3}\index{FSM.cpp@{FSM.cpp}!onMonluz@{onMonluz}}
+\index{onMonluz@{onMonluz}!FSM.cpp@{FSM.cpp}}
+\doxysubsubsection{\texorpdfstring{onMonluz()}{onMonluz()}}
+{\footnotesize\ttfamily \label{_f_s_m_8cpp_a7b8c39e7957dd3ff214b6dfc1c2e1ef3} 
+void on\+Monluz (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Callback de entrada al estado MONLUZ. 
+
+Inicia el monitoreo del sensor de luz y activa el temporizador encargado de controlar el tiempo en este estado. \Hypertarget{_f_s_m_8cpp_a74e3626f6e259ef322c2033f5bb7803b}\index{FSM.cpp@{FSM.cpp}!onMontem@{onMontem}}
+\index{onMontem@{onMontem}!FSM.cpp@{FSM.cpp}}
+\doxysubsubsection{\texorpdfstring{onMontem()}{onMontem()}}
+{\footnotesize\ttfamily \label{_f_s_m_8cpp_a74e3626f6e259ef322c2033f5bb7803b} 
+void on\+Montem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Callback de entrada al estado MONTEM. 
+
+Inicia las tareas necesarias para el monitoreo de temperatura, incluyendo temporizadores, lectura del sensor DHT y detección de flama. \Hypertarget{_f_s_m_8cpp_aca804055d6a8f7784fecbd5c872a8e04}\index{FSM.cpp@{FSM.cpp}!setupMachine@{setupMachine}}
+\index{setupMachine@{setupMachine}!FSM.cpp@{FSM.cpp}}
+\doxysubsubsection{\texorpdfstring{setupMachine()}{setupMachine()}}
+{\footnotesize\ttfamily \label{_f_s_m_8cpp_aca804055d6a8f7784fecbd5c872a8e04} 
+void setup\+Machine (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Configura la máquina de estados del sistema. 
+
+Define todas las transiciones entre estados y registra los callbacks que se ejecutan al entrar o salir de cada estado. 
