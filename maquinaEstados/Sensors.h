@@ -24,12 +24,6 @@ extern bool t5;
 extern bool t3;
 extern bool t2;
 extern bool t4;
-extern bool luz;
-extern bool tem1;
-extern bool tem2;
-extern bool hum1;
-extern bool hum2;
-extern DHT dht;
 
 // Funciones de los diferentes sensores y procesos complementarios
 
@@ -149,5 +143,6 @@ void enviarDatos(void);
  * y asigna el evento BOTON cuando se detecta una pulsación válida.
  */
 void leerBoton(void);
+
 
 #endif
