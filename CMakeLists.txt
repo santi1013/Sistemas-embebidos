@@ -1,0 +1,9 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "tareas.c"
+        "max30100.c"
+        "qmi8658.c"
+    INCLUDE_DIRS
+        "."
+)
