@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['sd_5fspi_5fcs_0',['SD_SPI_CS',['../config_8h.html#aee41b4af1e622759dd36df50095b375f',1,'config.h']]],
+  ['sd_5fspi_5fmiso_1',['SD_SPI_MISO',['../config_8h.html#a6cb3dfa84ac6ddf48a3405c23bd0ff29',1,'config.h']]],
+  ['sd_5fspi_5fmosi_2',['SD_SPI_MOSI',['../config_8h.html#a6d3779afa42548031ce4dbcf335df554',1,'config.h']]],
+  ['sd_5fspi_5fsclk_3',['SD_SPI_SCLK',['../config_8h.html#a7c1d06791da2324cb56602bd8b8f9695',1,'config.h']]],
+  ['sd_5ftask_5fpriority_4',['SD_TASK_PRIORITY',['../config_8h.html#af7ae6444a68a31912748706bd71eb10d',1,'config.h']]],
+  ['sd_5ftask_5fstack_5',['SD_TASK_STACK',['../config_8h.html#af5e8018395ed0def0eb670f805277d00',1,'config.h']]],
+  ['sd_5fwriter_5ftask_6',['sd_writer_task',['../task__manager_8c.html#a0c98e54f3a2d445b66af30bcbe6a7805',1,'task_manager.c']]],
+  ['sdcard_5fappend_5fline_7',['sdcard_append_line',['../sdcard__drv_8c.html#a2d82ff43d906f4a77a65bfcf9fef0fcb',1,'sdcard_append_line(FILE *file, const char *line):&#160;sdcard_drv.c'],['../sdcard__drv_8h.html#a2d82ff43d906f4a77a65bfcf9fef0fcb',1,'sdcard_append_line(FILE *file, const char *line):&#160;sdcard_drv.c']]],
+  ['sdcard_5fclose_5ffile_8',['sdcard_close_file',['../sdcard__drv_8c.html#a6aa3707cc7dc2c6c9efd2b544b2623a6',1,'sdcard_close_file(FILE *file):&#160;sdcard_drv.c'],['../sdcard__drv_8h.html#a6aa3707cc7dc2c6c9efd2b544b2623a6',1,'sdcard_close_file(FILE *file):&#160;sdcard_drv.c']]],
+  ['sdcard_5fdrv_2ec_9',['sdcard_drv.c',['../sdcard__drv_8c.html',1,'']]],
+  ['sdcard_5fdrv_2eh_10',['sdcard_drv.h',['../sdcard__drv_8h.html',1,'']]],
+  ['sdcard_5finit_11',['sdcard_init',['../sdcard__drv_8c.html#a86354bb5acc141915cecb9007808ff90',1,'sdcard_init(void):&#160;sdcard_drv.c'],['../sdcard__drv_8h.html#a86354bb5acc141915cecb9007808ff90',1,'sdcard_init(void):&#160;sdcard_drv.c']]],
+  ['sdcard_5fis_5fmounted_12',['sdcard_is_mounted',['../sdcard__drv_8c.html#a2e0bae15ec2a817006cdae17cb92875e',1,'sdcard_is_mounted(void):&#160;sdcard_drv.c'],['../sdcard__drv_8h.html#a2e0bae15ec2a817006cdae17cb92875e',1,'sdcard_is_mounted(void):&#160;sdcard_drv.c']]],
+  ['sdcard_5fopen_5flog_5ffile_13',['sdcard_open_log_file',['../sdcard__drv_8c.html#ad1784ea59b4b26090c5560dc70dc3390',1,'sdcard_open_log_file(const char *path):&#160;sdcard_drv.c'],['../sdcard__drv_8h.html#ad1784ea59b4b26090c5560dc70dc3390',1,'sdcard_open_log_file(const char *path):&#160;sdcard_drv.c']]],
+  ['sdkconfig_2eh_14',['sdkconfig.h',['../bootloader_2config_2sdkconfig_8h.html',1,'(Global Namespace)'],['../config_2sdkconfig_8h.html',1,'(Global Namespace)']]],
+  ['sensor_5fsample_5fperiod_5fms_15',['SENSOR_SAMPLE_PERIOD_MS',['../config_8h.html#a3b76d9011d7211b8fc3fe1d2b4409fb7',1,'config.h']]],
+  ['sensor_5ftask_16',['sensor_task',['../task__manager_8c.html#ace4199fd58186b9d927f83de69ca92f4',1,'task_manager.c']]],
+  ['sensor_5ftask_5fpriority_17',['SENSOR_TASK_PRIORITY',['../config_8h.html#af88752d4543f9c32588b0174affa7c5a',1,'config.h']]],
+  ['sensor_5ftask_5fstack_18',['SENSOR_TASK_STACK',['../config_8h.html#ab4118de7c2bb4ffc3b536d4a3d5fcf2b',1,'config.h']]],
+  ['status_5ftask_5fperiod_5fms_19',['STATUS_TASK_PERIOD_MS',['../config_8h.html#aa829658a03c49b44fcb0f6e74c0be885',1,'config.h']]],
+  ['status_5ftask_5fpriority_20',['STATUS_TASK_PRIORITY',['../config_8h.html#a08cb7fa50287bd8982eed09fbf922f56',1,'config.h']]],
+  ['status_5ftask_5fstack_21',['STATUS_TASK_STACK',['../config_8h.html#affa537101c21725253c7bab1abfb8be8',1,'config.h']]],
+  ['stringify_22',['STRINGIFY',['../bootloader_2_c_make_files_24_80_83_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY:&#160;CMakeCCompilerId.c'],['../bootloader_2_c_make_files_24_80_83_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY:&#160;CMakeCXXCompilerId.cpp'],['../_c_make_files_24_80_83_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY:&#160;CMakeCCompilerId.c'],['../_c_make_files_24_80_83_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY:&#160;CMakeCXXCompilerId.cpp']]],
+  ['stringify_5fhelper_23',['STRINGIFY_HELPER',['../bootloader_2_c_make_files_24_80_83_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER:&#160;CMakeCCompilerId.c'],['../bootloader_2_c_make_files_24_80_83_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER:&#160;CMakeCXXCompilerId.cpp'],['../_c_make_files_24_80_83_2_compiler_id_c_2_c_make_c_compiler_id_8c.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER:&#160;CMakeCCompilerId.c'],['../_c_make_files_24_80_83_2_compiler_id_c_x_x_2_c_make_c_x_x_compiler_id_8cpp.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER:&#160;CMakeCXXCompilerId.cpp']]]
+];

@@ -1,0 +1,27 @@
+var config_8h =
+[
+    [ "FORMAT_TASK_PRIORITY", "config_8h.html#a24db5339d750f854e395bddef3e837bd", null ],
+    [ "FORMAT_TASK_STACK", "config_8h.html#af629ce6d5ba79df5c48e53ede2bc7910", null ],
+    [ "I2C_MASTER_FREQ_HZ", "config_8h.html#a5c22ca4de37a83a59014e48b0a0b043d", null ],
+    [ "I2C_MASTER_NUM", "config_8h.html#aab9e642b6200f95fcbd2ad7466aaa2d3", null ],
+    [ "I2C_MASTER_SCL_IO", "config_8h.html#a033b5e8a30541fe4ff939a62fdb7a43d", null ],
+    [ "I2C_MASTER_SDA_IO", "config_8h.html#af47631d568bba17edf9d1ea042602bb6", null ],
+    [ "I2C_MASTER_TIMEOUT_MS", "config_8h.html#a7ebc0bc57afc33bd33967be8479690db", null ],
+    [ "LOG_FILE_PATH", "config_8h.html#a2889e8288a815b7468172bbf1cec1ead", null ],
+    [ "LOG_QUEUE_LENGTH", "config_8h.html#a74aee9c9c78e4322f4d815ac1c0665b7", null ],
+    [ "MPU6050_I2C_ADDR", "config_8h.html#a385c3cd85a9888c6c01c1cc1c4ec88ed", null ],
+    [ "RAW_QUEUE_LENGTH", "config_8h.html#ac5e8f23a0afafc7abff8ae98064e2eb9", null ],
+    [ "SD_SPI_CS", "config_8h.html#aee41b4af1e622759dd36df50095b375f", null ],
+    [ "SD_SPI_MISO", "config_8h.html#a6cb3dfa84ac6ddf48a3405c23bd0ff29", null ],
+    [ "SD_SPI_MOSI", "config_8h.html#a6d3779afa42548031ce4dbcf335df554", null ],
+    [ "SD_SPI_SCLK", "config_8h.html#a7c1d06791da2324cb56602bd8b8f9695", null ],
+    [ "SD_TASK_PRIORITY", "config_8h.html#af7ae6444a68a31912748706bd71eb10d", null ],
+    [ "SD_TASK_STACK", "config_8h.html#af5e8018395ed0def0eb670f805277d00", null ],
+    [ "SD_TEST_FILE_PATH", "config_8h.html#ad7801b30b9043875bf1e154458c351f4", null ],
+    [ "SENSOR_SAMPLE_PERIOD_MS", "config_8h.html#a3b76d9011d7211b8fc3fe1d2b4409fb7", null ],
+    [ "SENSOR_TASK_PRIORITY", "config_8h.html#af88752d4543f9c32588b0174affa7c5a", null ],
+    [ "SENSOR_TASK_STACK", "config_8h.html#ab4118de7c2bb4ffc3b536d4a3d5fcf2b", null ],
+    [ "STATUS_TASK_PERIOD_MS", "config_8h.html#aa829658a03c49b44fcb0f6e74c0be885", null ],
+    [ "STATUS_TASK_PRIORITY", "config_8h.html#a08cb7fa50287bd8982eed09fbf922f56", null ],
+    [ "STATUS_TASK_STACK", "config_8h.html#affa537101c21725253c7bab1abfb8be8", null ]
+];
