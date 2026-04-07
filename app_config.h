@@ -17,8 +17,8 @@
 #define QMI8658_I2C_SCL_GPIO            7
 
 // LED y botón
-#define LED_GPIO                        11
-#define BUTTON_GPIO                     10
+#define LED_GPIO                        -1
+#define BUTTON_GPIO                     -1
 
 /* ============================================================
  * CONFIGURACIÓN I2C GENERAL
@@ -88,7 +88,7 @@
 #define SD_SCK_GPIO                     33
 #define SD_CS_GPIO                      21
 
-#define SD_MOUNT_POINT                  "/Documents"
-#define SD_LOG_FILE_PATH                "/Documents/Sensores.txt"
+#define SD_MOUNT_POINT "/sdcard"
+#define SD_LOG_FILE_PATH "/sdcard/Sensores.txt"
 
 #endif

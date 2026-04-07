@@ -11,6 +11,7 @@
 #include "max30100.h"
 #include "tareas.h"
 #include "qmi8658.h"
+#include "sd.h"
 
 static const char *TAG_TAREAS = "TAREAS";
 
@@ -64,21 +65,22 @@ static void ejecutar_estado_ritmo(void)
 
     max30100_monitorear_signos_vitales(false, &resultado_ritmo);
 
-    printf("\n----- RITMO CARDIACO -----\n");
-    printf("Estado lectura   : %s\n", resultado_ritmo.estado_texto);
-    printf("Contacto         : %s\n", resultado_ritmo.contacto_detectado ? "SI" : "NO");
-    printf("Valido           : %s\n", resultado_ritmo.resultado_valido ? "SI" : "NO");
-    printf("IR promedio      : %.2f\n", resultado_ritmo.ir_promedio);
-    printf("Calidad senal    : %d\n", resultado_ritmo.calidad_senal);
-    printf("BPM calculado    : %d\n", resultado_ritmo.bpm_calculado);
-    printf("--------------------------\n\n");
+    sd_logger_printf("\n----- RITMO CARDIACO -----\n");
+    sd_logger_printf("Estado lectura   : %s\n", resultado_ritmo.estado_texto);
+    sd_logger_printf("Contacto         : %s\n", resultado_ritmo.contacto_detectado ? "SI" : "NO");
+    sd_logger_printf("Valido           : %s\n", resultado_ritmo.resultado_valido ? "SI" : "NO");
+    sd_logger_printf("IR promedio      : %.2f\n", resultado_ritmo.ir_promedio);
+    sd_logger_printf("Calidad senal    : %d\n", resultado_ritmo.calidad_senal);
+    sd_logger_printf("BPM calculado    : %d\n", resultado_ritmo.bpm_calculado);
+    sd_logger_printf("--------------------------\n\n");
 
     if (resultado_ritmo.resultado_valido) {
         if ((float)resultado_ritmo.bpm_calculado < RITMO_MIN_LPM ||
             (float)resultado_ritmo.bpm_calculado > RITMO_MAX_LPM) {
             contexto_sistema.contador_alertas_rojas++;
-            printf("ALERTA ROJA: Ritmo cardiaco fuera de rango\n");
-            printf("Total alertas rojas: %lu\n\n", (unsigned long)contexto_sistema.contador_alertas_rojas);
+            sd_logger_printf("ALERTA ROJA: Ritmo cardiaco fuera de rango\n");
+            sd_logger_printf("Total alertas rojas: %lu\n\n",
+                             (unsigned long)contexto_sistema.contador_alertas_rojas);
         }
     }
 }
@@ -94,14 +96,14 @@ static void ejecutar_estado_spo2(void)
 
     max30100_monitorear_signos_vitales(false, &resultado_spo2);
 
-    printf("\n----- SATURACION DE OXIGENO -----\n");
-    printf("Estado lectura   : %s\n", resultado_spo2.estado_texto);
-    printf("Contacto         : %s\n", resultado_spo2.contacto_detectado ? "SI" : "NO");
-    printf("Valido           : %s\n", resultado_spo2.resultado_valido ? "SI" : "NO");
-    printf("IR promedio      : %.2f\n", resultado_spo2.ir_promedio);
-    printf("Calidad senal    : %d\n", resultado_spo2.calidad_senal);
-    printf("SpO2 estimada    : %.2f %%\n", resultado_spo2.spo2_estimada);
-    printf("---------------------------------\n\n");
+    sd_logger_printf("\n----- SATURACION DE OXIGENO -----\n");
+    sd_logger_printf("Estado lectura   : %s\n", resultado_spo2.estado_texto);
+    sd_logger_printf("Contacto         : %s\n", resultado_spo2.contacto_detectado ? "SI" : "NO");
+    sd_logger_printf("Valido           : %s\n", resultado_spo2.resultado_valido ? "SI" : "NO");
+    sd_logger_printf("IR promedio      : %.2f\n", resultado_spo2.ir_promedio);
+    sd_logger_printf("Calidad senal    : %d\n", resultado_spo2.calidad_senal);
+    sd_logger_printf("SpO2 estimada    : %.2f %%\n", resultado_spo2.spo2_estimada);
+    sd_logger_printf("---------------------------------\n\n");
 }
 
 static void ejecutar_estado_acelerometro(void)
@@ -115,22 +117,22 @@ static void ejecutar_estado_acelerometro(void)
     ESP_LOGI(TAG_TAREAS, "ESTADO: ACELEROMETRO");
     ESP_LOGI(TAG_TAREAS, "==============================");
 
-    printf("\n----- ACELEROMETRO -----\n");
+    sd_logger_printf("\n----- ACELEROMETRO -----\n");
 
     while ((xTaskGetTickCount() - tiempo_inicio) < tiempo_estado) {
         if (qmi8658_leer_acelerometro(&acelerometro) == ESP_OK) {
-            printf("AX: %.3f g | AY: %.3f g | AZ: %.3f g\n",
-                   acelerometro.ax,
-                   acelerometro.ay,
-                   acelerometro.az);
+            sd_logger_printf("AX: %.3f g | AY: %.3f g | AZ: %.3f g\n",
+                             acelerometro.ax,
+                             acelerometro.ay,
+                             acelerometro.az);
         } else {
-            printf("Error leyendo acelerometro\n");
+            sd_logger_printf("Error leyendo acelerometro\n");
         }
 
         vTaskDelay(pdMS_TO_TICKS(200));
     }
 
-    printf("------------------------\n\n");
+    sd_logger_printf("------------------------\n\n");
 }
 
 static void ejecutar_estado_giroscopio(void)
@@ -144,22 +146,22 @@ static void ejecutar_estado_giroscopio(void)
     ESP_LOGI(TAG_TAREAS, "ESTADO: GIROSCOPIO");
     ESP_LOGI(TAG_TAREAS, "==============================");
 
-    printf("\n----- GIROSCOPIO -----\n");
+    sd_logger_printf("\n----- GIROSCOPIO -----\n");
 
     while ((xTaskGetTickCount() - tiempo_inicio) < tiempo_estado) {
         if (qmi8658_leer_giroscopio(&giroscopio) == ESP_OK) {
-            printf("GX: %.3f dps | GY: %.3f dps | GZ: %.3f dps\n",
-                   giroscopio.gx,
-                   giroscopio.gy,
-                   giroscopio.gz);
+            sd_logger_printf("GX: %.3f dps | GY: %.3f dps | GZ: %.3f dps\n",
+                             giroscopio.gx,
+                             giroscopio.gy,
+                             giroscopio.gz);
         } else {
-            printf("Error leyendo giroscopio\n");
+            sd_logger_printf("Error leyendo giroscopio\n");
         }
 
         vTaskDelay(pdMS_TO_TICKS(200));
     }
 
-    printf("----------------------\n\n");
+    sd_logger_printf("----------------------\n\n");
 }
 
 /* ============================================================
@@ -175,6 +177,13 @@ void tareas_inicializar(void)
 
     ESP_ERROR_CHECK(qmi8658_inicializar_i2c());
     ESP_ERROR_CHECK(qmi8658_inicializar_sensor());
+
+    esp_err_t ret_sd = sd_logger_inicializar();
+    if (ret_sd != ESP_OK) {
+        ESP_LOGW(TAG_TAREAS, "La SD no se pudo inicializar. Se continuara solo por serial.");
+    } else {
+        sd_logger_printf("SD inicializada correctamente\n");
+    }
 
     contexto_sistema.estado_actual = ESTADO_RITMO;
     contexto_sistema.contador_alertas_amarillas = 0;
