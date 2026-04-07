@@ -1,0 +1,827 @@
+------------------------
+
+I (357540) TAREAS: ==============================
+I (357540) TAREAS: ESTADO: GIROSCOPIO
+I (357540) TAREAS: ==============================
+
+----- GIROSCOPIO -----
+GX: 0.422 dps | GY: -0.984 dps | GZ: 6.844 dps
+GX: 14.516 dps | GY: 9.047 dps | GZ: 9.297 dps
+GX: 4.531 dps | GY: 7.062 dps | GZ: -0.766 dps
+GX: -6.078 dps | GY: 4.969 dps | GZ: 2.766 dps
+GX: -3.344 dps | GY: 9.547 dps | GZ: 6.734 dps
+GX: -7.375 dps | GY: 7.891 dps | GZ: 2.422 dps
+GX: -1.516 dps | GY: -4.250 dps | GZ: 3.312 dps
+GX: 15.406 dps | GY: 14.312 dps | GZ: 4.875 dps
+GX: -0.375 dps | GY: 63.703 dps | GZ: 40.234 dps
+GX: 29.109 dps | GY: -132.203 dps | GZ: -97.984 dps
+----------------------
+
+I (359650) TAREAS: ==============================
+I (359650) TAREAS: ESTADO: RITMO CARDIACO
+I (359650) TAREAS: ==============================
+I (359650) MAX30100: Iniciando monitoreo (200 muestras)...
+I (361710) MAX30100: BPM: 113 | SpO2: 85.6% | Calidad: 85/100
+
+----- RITMO CARDIACO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 15655.00
+Calidad senal    : 85
+BPM calculado    : 113
+--------------------------
+
+ALERTA ROJA: Ritmo cardiaco fuera de rango
+Total alertas rojas: 7
+
+I (361840) TAREAS: ==============================
+I (361840) TAREAS: ESTADO: SATURACION DE OXIGENO
+I (361840) TAREAS: ==============================
+I (361840) MAX30100: Iniciando monitoreo (200 muestras)...
+I (363900) MAX30100: BPM: 100 | SpO2: 86.6% | Calidad: 85/100
+
+----- SATURACION DE OXIGENO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 16490.51
+Calidad senal    : 85
+SpO2 estimada    : 86.60 %
+---------------------------------
+
+I (364020) TAREAS: ==============================
+I (364020) TAREAS: ESTADO: ACELEROMETRO
+I (364020) TAREAS: ==============================
+
+----- ACELEROMETRO -----
+AX: -0.097 g | AY: -0.298 g | AZ: -0.287 g
+AX: -0.148 g | AY: -0.313 g | AZ: -0.340 g
+AX: -0.102 g | AY: -0.362 g | AZ: -0.332 g
+AX: -0.093 g | AY: -0.352 g | AZ: -0.311 g
+AX: -0.109 g | AY: -0.364 g | AZ: -0.332 g
+AX: -0.089 g | AY: -0.364 g | AZ: -0.311 g
+AX: -0.061 g | AY: -0.337 g | AZ: -0.294 g
+AX: -0.045 g | AY: -0.314 g | AZ: -0.283 g
+AX: -0.075 g | AY: -0.328 g | AZ: -0.277 g
+AX: -0.055 g | AY: -0.332 g | AZ: -0.289 g
+------------------------
+
+I (366120) TAREAS: ==============================
+I (366120) TAREAS: ESTADO: GIROSCOPIO
+I (366120) TAREAS: ==============================
+
+----- GIROSCOPIO -----
+GX: -6.953 dps | GY: -9.000 dps | GZ: 0.344 dps
+GX: -1.500 dps | GY: 22.766 dps | GZ: -4.344 dps
+GX: -3.875 dps | GY: 12.844 dps | GZ: -1.672 dps
+GX: 0.141 dps | GY: 15.047 dps | GZ: -1.391 dps
+GX: -1.219 dps | GY: -1.859 dps | GZ: 2.000 dps
+GX: -0.312 dps | GY: -6.266 dps | GZ: 0.141 dps
+GX: 14.812 dps | GY: 8.172 dps | GZ: -0.953 dps
+GX: 27.016 dps | GY: 16.234 dps | GZ: -2.719 dps
+GX: 37.125 dps | GY: 5.906 dps | GZ: 4.000 dps
+GX: 47.812 dps | GY: -4.797 dps | GZ: 3.047 dps
+----------------------
+
+I (368240) TAREAS: ==============================
+I (368240) TAREAS: ESTADO: RITMO CARDIACO
+I (368240) TAREAS: ==============================
+I (368240) MAX30100: Iniciando monitoreo (200 muestras)...
+I (370300) MAX30100: BPM: 138 | SpO2: 90.3% | Calidad: 85/100
+
+----- RITMO CARDIACO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 15504.79
+Calidad senal    : 85
+BPM calculado    : 138
+--------------------------
+
+ALERTA ROJA: Ritmo cardiaco fuera de rango
+Total alertas rojas: 8
+
+I (370430) TAREAS: ==============================
+I (370430) TAREAS: ESTADO: SATURACION DE OXIGENO
+I (370430) TAREAS: ==============================
+I (370430) MAX30100: Iniciando monitoreo (200 muestras)...
+I (372490) MAX30100: BPM: 123 | SpO2: 85.7% | Calidad: 85/100
+
+----- SATURACION DE OXIGENO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 20006.12
+Calidad senal    : 85
+SpO2 estimada    : 85.65 %
+---------------------------------
+
+I (372610) TAREAS: ==============================
+I (372610) TAREAS: ESTADO: ACELEROMETRO
+I (372610) TAREAS: ==============================
+
+----- ACELEROMETRO -----
+AX: -0.027 g | AY: -0.306 g | AZ: -0.324 g
+AX: -0.029 g | AY: -0.333 g | AZ: -0.351 g
+AX: -0.061 g | AY: -0.356 g | AZ: -0.336 g
+AX: 0.037 g | AY: -0.329 g | AZ: -0.338 g
+AX: -0.048 g | AY: -0.271 g | AZ: -0.343 g
+AX: -0.062 g | AY: -0.238 g | AZ: -0.328 g
+AX: -0.083 g | AY: -0.317 g | AZ: -0.343 g
+AX: -0.028 g | AY: -0.250 g | AZ: -0.298 g
+AX: -0.026 g | AY: -0.328 g | AZ: -0.399 g
+AX: -0.465 g | AY: -0.034 g | AZ: -0.118 g
+------------------------
+
+I (374690) TAREAS: ==============================
+I (374690) TAREAS: ESTADO: GIROSCOPIO
+I (374690) TAREAS: ==============================
+
+----- GIROSCOPIO -----
+GX: -44.703 dps | GY: 61.703 dps | GZ: -99.219 dps
+GX: -12.688 dps | GY: -4.734 dps | GZ: -5.766 dps
+GX: 5.375 dps | GY: 35.531 dps | GZ: 9.328 dps
+GX: 13.375 dps | GY: -27.016 dps | GZ: -0.734 dps
+GX: 9.719 dps | GY: 7.328 dps | GZ: -11.281 dps
+GX: 0.453 dps | GY: 20.281 dps | GZ: -7.031 dps
+GX: 4.328 dps | GY: 24.891 dps | GZ: -3.125 dps
+GX: -1.078 dps | GY: 17.172 dps | GZ: 3.781 dps
+GX: 6.109 dps | GY: 8.016 dps | GZ: 4.797 dps
+GX: -0.516 dps | GY: 111.031 dps | GZ: 14.688 dps
+----------------------
+
+I (376810) TAREAS: ==============================
+I (376810) TAREAS: ESTADO: RITMO CARDIACO
+I (376810) TAREAS: ==============================
+I (376810) MAX30100: Iniciando monitoreo (200 muestras)...
+I (378870) MAX30100: BPM: 53 | SpO2: 88.6% | Calidad: 85/100
+
+----- RITMO CARDIACO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 12714.79
+Calidad senal    : 85
+BPM calculado    : 53
+--------------------------
+
+ALERTA ROJA: Ritmo cardiaco fuera de rango
+Total alertas rojas: 9
+
+I (379000) TAREAS: ==============================
+I (379000) TAREAS: ESTADO: SATURACION DE OXIGENO
+I (379000) TAREAS: ==============================
+I (379000) MAX30100: Iniciando monitoreo (200 muestras)...
+I (381060) MAX30100: BPM: 116 | SpO2: 86.6% | Calidad: 85/100
+
+----- SATURACION DE OXIGENO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 23072.19
+Calidad senal    : 85
+SpO2 estimada    : 86.59 %
+---------------------------------
+
+I (381180) TAREAS: ==============================
+I (381180) TAREAS: ESTADO: ACELEROMETRO
+I (381180) TAREAS: ==============================
+
+----- ACELEROMETRO -----
+AX: -0.189 g | AY: -0.274 g | AZ: -0.274 g
+AX: -0.174 g | AY: -0.279 g | AZ: -0.286 g
+AX: -0.194 g | AY: -0.278 g | AZ: -0.286 g
+AX: -0.191 g | AY: -0.294 g | AZ: -0.301 g
+AX: -0.181 g | AY: -0.297 g | AZ: -0.314 g
+AX: -0.230 g | AY: -0.306 g | AZ: -0.303 g
+AX: -0.215 g | AY: -0.293 g | AZ: -0.314 g
+AX: -0.219 g | AY: -0.285 g | AZ: -0.307 g
+AX: -0.198 g | AY: -0.294 g | AZ: -0.284 g
+AX: -0.190 g | AY: -0.343 g | AZ: -0.295 g
+------------------------
+
+I (383260) TAREAS: ==============================
+I (383260) TAREAS: ESTADO: GIROSCOPIO
+I (383260) TAREAS: ==============================
+
+----- GIROSCOPIO -----
+GX: 7.375 dps | GY: -12.656 dps | GZ: -1.391 dps
+GX: 5.156 dps | GY: 3.500 dps | GZ: -0.297 dps
+GX: 12.953 dps | GY: -3.453 dps | GZ: 3.781 dps
+GX: 14.844 dps | GY: 12.500 dps | GZ: -4.562 dps
+GX: -0.344 dps | GY: 10.875 dps | GZ: -0.125 dps
+GX: 8.625 dps | GY: 9.109 dps | GZ: -3.062 dps
+GX: 0.953 dps | GY: 11.500 dps | GZ: -2.531 dps
+GX: -2.250 dps | GY: 19.078 dps | GZ: -1.922 dps
+GX: -3.641 dps | GY: 9.859 dps | GZ: 0.234 dps
+GX: 15.641 dps | GY: 4.766 dps | GZ: -0.719 dps
+----------------------
+
+I (385390) TAREAS: ==============================
+I (385390) TAREAS: ESTADO: RITMO CARDIACO
+I (385390) TAREAS: ==============================
+I (385390) MAX30100: Iniciando monitoreo (200 muestras)...
+I (387450) MAX30100: BPM: 88 | SpO2: 85.9% | Calidad: 85/100
+
+----- RITMO CARDIACO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 20994.84
+Calidad senal    : 85
+BPM calculado    : 88
+--------------------------
+
+ALERTA ROJA: Ritmo cardiaco fuera de rango
+Total alertas rojas: 10
+
+I (387580) TAREAS: ==============================
+I (387580) TAREAS: ESTADO: SATURACION DE OXIGENO
+I (387580) TAREAS: ==============================
+I (387580) MAX30100: Iniciando monitoreo (200 muestras)...
+I (389640) MAX30100: BPM: 124 | SpO2: 86.3% | Calidad: 85/100
+
+----- SATURACION DE OXIGENO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 18651.39
+Calidad senal    : 85
+SpO2 estimada    : 86.28 %
+---------------------------------
+
+I (389750) TAREAS: ==============================
+I (389750) TAREAS: ESTADO: ACELEROMETRO
+I (389750) TAREAS: ==============================
+
+----- ACELEROMETRO -----
+AX: -0.104 g | AY: -0.333 g | AZ: -0.275 g
+AX: -0.074 g | AY: -0.336 g | AZ: -0.268 g
+AX: -0.075 g | AY: -0.344 g | AZ: -0.287 g
+AX: -0.069 g | AY: -0.344 g | AZ: -0.304 g
+AX: -0.085 g | AY: -0.328 g | AZ: -0.284 g
+AX: -0.058 g | AY: -0.344 g | AZ: -0.309 g
+AX: -0.112 g | AY: -0.339 g | AZ: -0.302 g
+AX: -0.056 g | AY: -0.338 g | AZ: -0.309 g
+AX: -0.068 g | AY: -0.336 g | AZ: -0.296 g
+AX: -0.076 g | AY: -0.334 g | AZ: -0.312 g
+------------------------
+
+I (391830) TAREAS: ==============================
+I (391830) TAREAS: ESTADO: GIROSCOPIO
+I (391830) TAREAS: ==============================
+
+----- GIROSCOPIO -----
+GX: 0.891 dps | GY: 2.844 dps | GZ: 0.469 dps
+GX: -4.094 dps | GY: 5.594 dps | GZ: -0.859 dps
+GX: 2.562 dps | GY: 6.578 dps | GZ: 0.516 dps
+GX: 4.266 dps | GY: 1.000 dps | GZ: 2.547 dps
+GX: 6.281 dps | GY: 2.875 dps | GZ: -1.172 dps
+GX: 14.391 dps | GY: 8.750 dps | GZ: 1.031 dps
+GX: 6.688 dps | GY: 1.828 dps | GZ: -1.828 dps
+GX: -0.031 dps | GY: 6.312 dps | GZ: -0.516 dps
+GX: -4.875 dps | GY: 11.859 dps | GZ: 0.094 dps
+GX: 15.328 dps | GY: 13.312 dps | GZ: -4.453 dps
+----------------------
+
+I (393950) TAREAS: ==============================
+I (393950) TAREAS: ESTADO: RITMO CARDIACO
+I (393950) TAREAS: ==============================
+I (393950) MAX30100: Iniciando monitoreo (200 muestras)...
+I (396010) MAX30100: BPM: 116 | SpO2: 84.3% | Calidad: 85/100
+
+----- RITMO CARDIACO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 18541.14
+Calidad senal    : 85
+BPM calculado    : 116
+--------------------------
+
+ALERTA ROJA: Ritmo cardiaco fuera de rango
+Total alertas rojas: 11
+
+I (396140) TAREAS: ==============================
+I (396140) TAREAS: ESTADO: SATURACION DE OXIGENO
+I (396140) TAREAS: ==============================
+I (396140) MAX30100: Iniciando monitoreo (200 muestras)...
+I (398200) MAX30100: BPM: 117 | SpO2: 84.8% | Calidad: 75/100
+
+----- SATURACION DE OXIGENO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 17796.20
+Calidad senal    : 75
+SpO2 estimada    : 84.83 %
+---------------------------------
+
+I (398340) TAREAS: ==============================
+I (398340) TAREAS: ESTADO: ACELEROMETRO
+I (398340) TAREAS: ==============================
+
+----- ACELEROMETRO -----
+AX: -0.089 g | AY: -0.344 g | AZ: -0.311 g
+AX: -0.073 g | AY: -0.358 g | AZ: -0.319 g
+AX: -0.069 g | AY: -0.352 g | AZ: -0.311 g
+AX: -0.059 g | AY: -0.351 g | AZ: -0.321 g
+AX: -0.076 g | AY: -0.349 g | AZ: -0.318 g
+AX: -0.091 g | AY: -0.337 g | AZ: -0.306 g
+AX: -0.082 g | AY: -0.341 g | AZ: -0.310 g
+AX: -0.075 g | AY: -0.341 g | AZ: -0.313 g
+AX: -0.080 g | AY: -0.345 g | AZ: -0.306 g
+AX: -0.097 g | AY: -0.332 g | AZ: -0.312 g
+------------------------
+
+I (400410) TAREAS: ==============================
+I (400410) TAREAS: ESTADO: GIROSCOPIO
+I (400410) TAREAS: ==============================
+
+----- GIROSCOPIO -----
+GX: -0.516 dps | GY: -0.312 dps | GZ: 1.969 dps
+GX: 5.766 dps | GY: -3.672 dps | GZ: 1.625 dps
+GX: 6.719 dps | GY: -0.203 dps | GZ: 0.688 dps
+GX: 8.312 dps | GY: 4.406 dps | GZ: -0.688 dps
+GX: 8.391 dps | GY: 14.125 dps | GZ: -2.984 dps
+GX: 6.312 dps | GY: 11.609 dps | GZ: -3.391 dps
+GX: 10.344 dps | GY: 17.500 dps | GZ: -0.172 dps
+GX: 5.609 dps | GY: 11.578 dps | GZ: -3.203 dps
+GX: 5.312 dps | GY: 15.328 dps | GZ: -3.094 dps
+GX: 0.156 dps | GY: 6.562 dps | GZ: -0.469 dps
+----------------------
+
+I (402560) TAREAS: ==============================
+I (402560) TAREAS: ESTADO: RITMO CARDIACO
+I (402560) TAREAS: ==============================
+I (402560) MAX30100: Iniciando monitoreo (200 muestras)...
+I (404620) MAX30100: BPM: 133 | SpO2: 86.4% | Calidad: 75/100
+
+----- RITMO CARDIACO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 17538.78
+Calidad senal    : 75
+BPM calculado    : 133
+--------------------------
+
+ALERTA ROJA: Ritmo cardiaco fuera de rango
+Total alertas rojas: 12
+
+I (404750) TAREAS: ==============================
+I (404750) TAREAS: ESTADO: SATURACION DE OXIGENO
+I (404750) TAREAS: ==============================
+I (404750) MAX30100: Iniciando monitoreo (200 muestras)...
+I (406810) MAX30100: BPM: 108 | SpO2: 85.0% | Calidad: 85/100
+
+----- SATURACION DE OXIGENO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 17353.20
+Calidad senal    : 85
+SpO2 estimada    : 85.04 %
+---------------------------------
+
+I (406930) TAREAS: ==============================
+I (406930) TAREAS: ESTADO: ACELEROMETRO
+I (406930) TAREAS: ==============================
+
+----- ACELEROMETRO -----
+AX: -0.075 g | AY: -0.347 g | AZ: -0.304 g
+AX: -0.082 g | AY: -0.327 g | AZ: -0.314 g
+AX: -0.064 g | AY: -0.337 g | AZ: -0.316 g
+AX: -0.086 g | AY: -0.340 g | AZ: -0.319 g
+AX: -0.042 g | AY: -0.386 g | AZ: -0.344 g
+AX: -0.030 g | AY: -0.311 g | AZ: -0.307 g
+AX: -0.168 g | AY: -0.251 g | AZ: -0.193 g
+AX: -0.191 g | AY: -0.263 g | AZ: -0.413 g
+AX: 0.143 g | AY: -0.257 g | AZ: -0.388 g
+AX: -0.089 g | AY: -0.227 g | AZ: -0.306 g
+------------------------
+
+I (409000) TAREAS: ==============================
+I (409000) TAREAS: ESTADO: GIROSCOPIO
+I (409000) TAREAS: ==============================
+
+----- GIROSCOPIO -----
+GX: 25.672 dps | GY: -16.766 dps | GZ: 21.266 dps
+GX: 47.750 dps | GY: 14.578 dps | GZ: -11.359 dps
+GX: 10.172 dps | GY: 16.812 dps | GZ: -8.953 dps
+GX: -17.016 dps | GY: 85.641 dps | GZ: -22.703 dps
+GX: 12.906 dps | GY: 17.797 dps | GZ: -8.062 dps
+GX: 14.766 dps | GY: 17.875 dps | GZ: -7.375 dps
+GX: 6.000 dps | GY: 2.828 dps | GZ: -3.562 dps
+GX: 6.859 dps | GY: -4.766 dps | GZ: -0.328 dps
+GX: -4.922 dps | GY: -7.594 dps | GZ: -5.172 dps
+GX: -13.672 dps | GY: -10.375 dps | GZ: -1.938 dps
+----------------------
+
+I (411120) TAREAS: ==============================
+I (411120) TAREAS: ESTADO: RITMO CARDIACO
+I (411120) TAREAS: ==============================
+I (411120) MAX30100: Iniciando monitoreo (200 muestras)...
+I (413180) MAX30100: BPM: 107 | SpO2: 85.3% | Calidad: 85/100
+
+----- RITMO CARDIACO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 22424.45
+Calidad senal    : 85
+BPM calculado    : 107
+--------------------------
+
+ALERTA ROJA: Ritmo cardiaco fuera de rango
+Total alertas rojas: 13
+
+I (413310) TAREAS: ==============================
+I (413310) TAREAS: ESTADO: SATURACION DE OXIGENO
+I (413310) TAREAS: ==============================
+I (413310) MAX30100: Iniciando monitoreo (200 muestras)...
+I (415370) MAX30100: BPM: 144 | SpO2: 86.2% | Calidad: 85/100
+
+----- SATURACION DE OXIGENO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 19088.57
+Calidad senal    : 85
+SpO2 estimada    : 86.17 %
+---------------------------------
+
+I (415480) TAREAS: ==============================
+I (415480) TAREAS: ESTADO: ACELEROMETRO
+I (415480) TAREAS: ==============================
+
+----- ACELEROMETRO -----
+AX: -0.118 g | AY: -0.329 g | AZ: -0.263 g
+AX: -0.127 g | AY: -0.323 g | AZ: -0.259 g
+AX: -0.110 g | AY: -0.316 g | AZ: -0.236 g
+AX: -0.103 g | AY: -0.320 g | AZ: -0.248 g
+AX: -0.098 g | AY: -0.325 g | AZ: -0.271 g
+AX: -0.124 g | AY: -0.336 g | AZ: -0.273 g
+AX: -0.173 g | AY: -0.373 g | AZ: -0.333 g
+AX: -0.130 g | AY: -0.250 g | AZ: -0.284 g
+AX: -0.089 g | AY: -0.292 g | AZ: -0.273 g
+AX: -0.077 g | AY: -0.351 g | AZ: -0.193 g
+------------------------
+
+I (417560) TAREAS: ==============================
+I (417560) TAREAS: ESTADO: GIROSCOPIO
+I (417560) TAREAS: ==============================
+
+----- GIROSCOPIO -----
+GX: 14.500 dps | GY: 4.141 dps | GZ: -6.547 dps
+GX: 19.047 dps | GY: 2.859 dps | GZ: 0.266 dps
+GX: -4.047 dps | GY: -3.125 dps | GZ: 11.984 dps
+GX: 3.375 dps | GY: -0.516 dps | GZ: 4.500 dps
+GX: -1.891 dps | GY: -8.562 dps | GZ: 5.250 dps
+GX: 8.281 dps | GY: -4.531 dps | GZ: 2.594 dps
+GX: 6.891 dps | GY: -0.156 dps | GZ: 2.219 dps
+GX: -1.062 dps | GY: -6.547 dps | GZ: 6.609 dps
+GX: 2.297 dps | GY: -3.500 dps | GZ: 7.031 dps
+GX: -4.875 dps | GY: -6.719 dps | GZ: 4.469 dps
+----------------------
+
+I (419650) TAREAS: ==============================
+I (419650) TAREAS: ESTADO: RITMO CARDIACO
+I (419650) TAREAS: ==============================
+I (419650) MAX30100: Iniciando monitoreo (200 muestras)...
+
+----- RITMO CARDIACO -----
+Estado lectura   : Sin contacto
+Contacto         : NO
+Valido           : NO
+IR promedio      : 9871.02
+Calidad senal    : 0
+BPM calculado    : -1
+--------------------------
+
+I (421820) TAREAS: ==============================
+I (421820) TAREAS: ESTADO: SATURACION DE OXIGENO
+I (421820) TAREAS: ==============================
+I (421820) MAX30100: Iniciando monitoreo (200 muestras)...
+
+----- SATURACION DE OXIGENO -----
+Estado lectura   : Sin contacto
+Contacto         : NO
+Valido           : NO
+IR promedio      : 8882.89
+Calidad senal    : 0
+SpO2 estimada    : -1.00 %
+---------------------------------
+
+I (423990) TAREAS: ==============================
+I (423990) TAREAS: ESTADO: ACELEROMETRO
+I (423990) TAREAS: ==============================
+
+----- ACELEROMETRO -----
+AX: -0.130 g | AY: -0.355 g | AZ: -0.272 g
+AX: -0.090 g | AY: -0.337 g | AZ: -0.226 g
+AX: -0.080 g | AY: -0.366 g | AZ: -0.213 g
+AX: -0.092 g | AY: -0.359 g | AZ: -0.227 g
+AX: -0.087 g | AY: -0.354 g | AZ: -0.210 g
+AX: -0.110 g | AY: -0.360 g | AZ: -0.237 g
+AX: -0.119 g | AY: -0.353 g | AZ: -0.223 g
+AX: -0.110 g | AY: -0.374 g | AZ: -0.243 g
+AX: -0.130 g | AY: -0.352 g | AZ: -0.283 g
+AX: -0.136 g | AY: -0.333 g | AZ: -0.268 g
+------------------------
+
+I (426070) TAREAS: ==============================
+I (426070) TAREAS: ESTADO: GIROSCOPIO
+I (426070) TAREAS: ==============================
+
+----- GIROSCOPIO -----
+GX: 7.516 dps | GY: 14.188 dps | GZ: -2.141 dps
+GX: 10.719 dps | GY: 12.469 dps | GZ: -3.422 dps
+GX: 7.891 dps | GY: 1.578 dps | GZ: 3.328 dps
+GX: -0.500 dps | GY: -1.828 dps | GZ: 4.828 dps
+GX: -0.844 dps | GY: -4.312 dps | GZ: 2.703 dps
+GX: 0.078 dps | GY: 0.844 dps | GZ: 0.844 dps
+GX: 2.922 dps | GY: 9.469 dps | GZ: -3.953 dps
+GX: 8.359 dps | GY: 11.859 dps | GZ: -6.344 dps
+GX: 7.578 dps | GY: 8.922 dps | GZ: -4.453 dps
+GX: 7.750 dps | GY: 6.406 dps | GZ: -1.844 dps
+----------------------
+
+I (428160) TAREAS: ==============================
+I (428160) TAREAS: ESTADO: RITMO CARDIACO
+I (428160) TAREAS: ==============================
+I (428160) MAX30100: Iniciando monitoreo (200 muestras)...
+
+----- RITMO CARDIACO -----
+Estado lectura   : Sin contacto
+Contacto         : NO
+Valido           : NO
+IR promedio      : 8492.23
+Calidad senal    : 0
+BPM calculado    : -1
+--------------------------
+
+I (430340) TAREAS: ==============================
+I (430340) TAREAS: ESTADO: SATURACION DE OXIGENO
+I (430340) TAREAS: ==============================
+I (430340) MAX30100: Iniciando monitoreo (200 muestras)...
+
+----- SATURACION DE OXIGENO -----
+Estado lectura   : Sin contacto
+Contacto         : NO
+Valido           : NO
+IR promedio      : 8607.14
+Calidad senal    : 0
+SpO2 estimada    : -1.00 %
+---------------------------------
+
+I (432530) TAREAS: ==============================
+I (432530) TAREAS: ESTADO: ACELEROMETRO
+I (432530) TAREAS: ==============================
+
+----- ACELEROMETRO -----
+AX: -0.122 g | AY: -0.345 g | AZ: -0.230 g
+AX: -0.114 g | AY: -0.358 g | AZ: -0.218 g
+AX: -0.118 g | AY: -0.350 g | AZ: -0.237 g
+AX: -0.123 g | AY: -0.364 g | AZ: -0.243 g
+AX: -0.138 g | AY: -0.360 g | AZ: -0.263 g
+AX: -0.131 g | AY: -0.365 g | AZ: -0.251 g
+AX: -0.165 g | AY: -0.404 g | AZ: -0.281 g
+AX: -0.163 g | AY: -0.275 g | AZ: -0.321 g
+AX: -0.105 g | AY: -0.257 g | AZ: -0.309 g
+AX: -0.029 g | AY: -0.234 g | AZ: -0.364 g
+------------------------
+
+I (434610) TAREAS: ==============================
+I (434610) TAREAS: ESTADO: GIROSCOPIO
+I (434610) TAREAS: ==============================
+
+----- GIROSCOPIO -----
+GX: 12.312 dps | GY: 4.609 dps | GZ: 2.781 dps
+GX: 10.328 dps | GY: 1.656 dps | GZ: -7.000 dps
+GX: 19.781 dps | GY: 9.797 dps | GZ: 1.250 dps
+GX: -1.047 dps | GY: -3.703 dps | GZ: 4.719 dps
+GX: 8.266 dps | GY: 5.953 dps | GZ: -11.344 dps
+GX: 5.266 dps | GY: 6.062 dps | GZ: -5.344 dps
+GX: 11.156 dps | GY: -15.203 dps | GZ: -2.344 dps
+GX: 0.641 dps | GY: 6.172 dps | GZ: -8.875 dps
+GX: 2.016 dps | GY: 11.172 dps | GZ: -2.938 dps
+GX: 17.203 dps | GY: 6.391 dps | GZ: 10.797 dps
+----------------------
+
+I (436730) TAREAS: ==============================
+I (436730) TAREAS: ESTADO: RITMO CARDIACO
+I (436730) TAREAS: ==============================
+I (436730) MAX30100: Iniciando monitoreo (200 muestras)...
+I (438790) MAX30100: BPM: -1 | SpO2: 84.8% | Calidad: 100/100
+
+----- RITMO CARDIACO -----
+Estado lectura   : Pulso inestable
+Contacto         : SI
+Valido           : NO
+IR promedio      : 32934.05
+Calidad senal    : 100
+BPM calculado    : -1
+--------------------------
+
+I (438920) TAREAS: ==============================
+I (438920) TAREAS: ESTADO: SATURACION DE OXIGENO
+I (438920) TAREAS: ==============================
+I (438920) MAX30100: Iniciando monitoreo (200 muestras)...
+I (440980) MAX30100: BPM: 140 | SpO2: 82.4% | Calidad: 100/100
+
+----- SATURACION DE OXIGENO -----
+Estado lectura   : Lectura válida
+Contacto         : SI
+Valido           : SI
+IR promedio      : 58150.07
+Calidad senal    : 100
+SpO2 estimada    : 82.39 %
+---------------------------------
+
+I (441100) TAREAS: ==============================
+I (441100) TAREAS: ESTADO: ACELEROMETRO
+I (441100) TAREAS: ==============================
+
+----- ACELEROMETRO -----
+AX: 0.060 g | AY: -0.324 g | AZ: -0.248 g
+AX: 0.171 g | AY: -0.317 g | AZ: -0.272 g
+AX: 0.153 g | AY: -0.260 g | AZ: -0.327 g
+AX: 0.103 g | AY: -0.336 g | AZ: -0.318 g
+AX: 0.184 g | AY: -0.347 g | AZ: -0.263 g
+AX: 0.127 g | AY: -0.354 g | AZ: -0.153 g
+AX: 0.098 g | AY: -0.388 g | AZ: -0.157 g
+AX: 0.052 g | AY: -0.395 g | AZ: -0.150 g
+AX: 0.016 g | AY: -0.442 g | AZ: -0.071 g
+AX: -0.070 g | AY: -0.361 g | AZ: 0.119 g
+------------------------
+
+I (443180) TAREAS: ==============================
+I (443180) TAREAS: ESTADO: GIROSCOPIO
+I (443180) TAREAS: ==============================
+
+----- GIROSCOPIO -----
+GX: 50.391 dps | GY: -35.297 dps | GZ: -6.203 dps
+GX: 10.672 dps | GY: 47.375 dps | GZ: 12.844 dps
+GX: 33.047 dps | GY: 8.969 dps | GZ: 6.484 dps
+GX: 57.766 dps | GY: 73.844 dps | GZ: -51.062 dps
+GX: -23.547 dps | GY: 64.969 dps | GZ: -57.797 dps
+GX: 40.891 dps | GY: 83.172 dps | GZ: -80.969 dps
+GX: 40.016 dps | GY: 58.984 dps | GZ: -78.781 dps
+GX: 49.156 dps | GY: 71.906 dps | GZ: -85.406 dps
+GX: 34.078 dps | GY: 51.125 dps | GZ: -43.594 dps
+GX: 76.469 dps | GY: 39.938 dps | GZ: 57.953 dps
+----------------------
+
+I (445310) TAREAS: ==============================
+I (445310) TAREAS: ESTADO: RITMO CARDIACO
+I (445310) TAREAS: ==============================
+I (445310) MAX30100: Iniciando monitoreo (200 muestras)...
+
+----- RITMO CARDIACO -----
+Estado lectura   : Sin contacto
+Contacto         : NO
+Valido           : NO
+IR promedio      : 4002.01
+Calidad senal    : 0
+BPM calculado    : -1
+--------------------------
+
+I (447480) TAREAS: ==============================
+I (447480) TAREAS: ESTADO: SATURACION DE OXIGENO
+I (447480) TAREAS: ==============================
+I (447480) MAX30100: Iniciando monitoreo (200 muestras)...
+
+----- SATURACION DE OXIGENO -----
+Estado lectura   : Sin contacto
+Contacto         : NO
+Valido           : NO
+IR promedio      : 116.22
+Calidad senal    : 0
+SpO2 estimada    : -1.00 %
+---------------------------------
+
+I (449650) TAREAS: ==============================
+I (449650) TAREAS: ESTADO: ACELEROMETRO
+I (449650) TAREAS: ==============================
+
+----- ACELEROMETRO -----
+AX: -0.267 g | AY: 0.116 g | AZ: 0.501 g
+AX: -0.221 g | AY: -0.025 g | AZ: 0.501 g
+AX: -0.214 g | AY: -0.040 g | AZ: 0.441 g
+AX: -0.285 g | AY: -0.133 g | AZ: 0.302 g
+AX: -0.258 g | AY: -0.313 g | AZ: 0.421 g
+AX: -0.249 g | AY: -0.185 g | AZ: 0.352 g
+AX: -0.090 g | AY: -0.285 g | AZ: 0.354 g
+AX: -0.104 g | AY: -0.229 g | AZ: 0.382 g
+AX: -0.157 g | AY: -0.210 g | AZ: 0.393 g
+AX: -0.129 g | AY: -0.180 g | AZ: 0.388 g
+------------------------
+
+I (451730) TAREAS: ==============================
+I (451730) TAREAS: ESTADO: GIROSCOPIO
+I (451730) TAREAS: ==============================
+
+----- GIROSCOPIO -----
+GX: -45.828 dps | GY: 8.000 dps | GZ: -16.125 dps
+GX: -12.875 dps | GY: -11.812 dps | GZ: -5.500 dps
+GX: -39.859 dps | GY: -29.031 dps | GZ: -11.062 dps
+GX: 3.781 dps | GY: -5.562 dps | GZ: 11.672 dps
+GX: 13.766 dps | GY: 8.250 dps | GZ: 1.391 dps
+GX: 12.094 dps | GY: 12.344 dps | GZ: -1.141 dps
+GX: -28.531 dps | GY: -8.219 dps | GZ: -11.391 dps
+GX: -18.297 dps | GY: 11.047 dps | GZ: -6.719 dps
+GX: 18.391 dps | GY: 17.016 dps | GZ: 0.766 dps
+GX: 15.188 dps | GY: 10.516 dps | GZ: 1.312 dps
+----------------------
+
+I (453860) TAREAS: ==============================
+I (453860) TAREAS: ESTADO: RITMO CARDIACO
+I (453860) TAREAS: ==============================
+I (453860) MAX30100: Iniciando monitoreo (200 muestras)...
+
+----- RITMO CARDIACO -----
+Estado lectura   : Sin contacto
+Contacto         : NO
+Valido           : NO
+IR promedio      : 493.79
+Calidad senal    : 0
+BPM calculado    : -1
+--------------------------
+
+I (456030) TAREAS: ==============================
+I (456030) TAREAS: ESTADO: SATURACION DE OXIGENO
+I (456030) TAREAS: ==============================
+I (456030) MAX30100: Iniciando monitoreo (200 muestras)...
+
+----- SATURACION DE OXIGENO -----
+Estado lectura   : Sin contacto
+Contacto         : NO
+Valido           : NO
+IR promedio      : 386.86
+Calidad senal    : 0
+SpO2 estimada    : -1.00 %
+---------------------------------
+
+I (458200) TAREAS: ==============================
+I (458200) TAREAS: ESTADO: ACELEROMETRO
+I (458200) TAREAS: ==============================
+
+----- ACELEROMETRO -----
+AX: -0.104 g | AY: -0.284 g | AZ: 0.182 g
+AX: -0.064 g | AY: -0.291 g | AZ: 0.384 g
+AX: 0.012 g | AY: -0.308 g | AZ: 0.383 g
+AX: 0.035 g | AY: -0.292 g | AZ: 0.341 g
+AX: 0.070 g | AY: -0.287 g | AZ: 0.341 g
+AX: 0.055 g | AY: -0.318 g | AZ: 0.344 g
+AX: 0.040 g | AY: -0.303 g | AZ: 0.341 g
+AX: 0.033 g | AY: -0.292 g | AZ: 0.346 g
+AX: 0.038 g | AY: -0.299 g | AZ: 0.355 g
+AX: 0.022 g | AY: -0.297 g | AZ: 0.382 g
+------------------------
+
+I (460270) TAREAS: ==============================
+I (460270) TAREAS: ESTADO: GIROSCOPIO
+I (460270) TAREAS: ==============================
+
+----- GIROSCOPIO -----
+GX: 40.828 dps | GY: 18.281 dps | GZ: 18.516 dps
+GX: -0.859 dps | GY: -2.844 dps | GZ: -14.688 dps
+GX: -7.641 dps | GY: 5.609 dps | GZ: -16.984 dps
+GX: 5.188 dps | GY: -0.859 dps | GZ: -8.203 dps
+GX: -6.172 dps | GY: 3.781 dps | GZ: -5.703 dps
+GX: -1.172 dps | GY: -0.859 dps | GZ: 2.469 dps
+GX: -3.297 dps | GY: -0.781 dps | GZ: -20.344 dps
+GX: -20.250 dps | GY: -0.297 dps | GZ: 10.281 dps
+GX: 5.469 dps | GY: -17.906 dps | GZ: 46.672 dps
+GX: 52.266 dps | GY: 33.859 dps | GZ: -6.969 dps
+----------------------
+
+I (462380) TAREAS: ==============================
+I (462380) TAREAS: ESTADO: RITMO CARDIACO
+I (462380) TAREAS: ==============================
+I (462380) MAX30100: Iniciando monitoreo (200 muestras)...
+
+----- RITMO CARDIACO -----
+Estado lectura   : Sin contacto
+Contacto         : NO
+Valido           : NO
+IR promedio      : 122.85
+Calidad senal    : 0
+BPM calculado    : -1
+--------------------------
+
+I (464560) TAREAS: ==============================
+I (464560) TAREAS: ESTADO: SATURACION DE OXIGENO
+I (464560) TAREAS: ==============================
+I (464560) MAX30100: Iniciando monitoreo (200 muestras)...
+
+----- SATURACION DE OXIGENO -----
+Estado lectura   : Sin contacto
+Contacto         : NO
+Valido           : NO
+IR promedio      : 164.04
+Calidad senal    : 0
+SpO2 estimada    : -1.00 %
+---------------------------------
