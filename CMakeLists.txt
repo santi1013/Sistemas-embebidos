@@ -4,6 +4,8 @@ idf_component_register(
         "tareas.c"
         "max30100.c"
         "qmi8658.c"
+        "sd.c"
+        "pantalla.c"
     INCLUDE_DIRS
         "."
 )

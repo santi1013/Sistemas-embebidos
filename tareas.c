@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <math.h>
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -11,11 +12,13 @@
 #include "max30100.h"
 #include "tareas.h"
 #include "qmi8658.h"
+#include "sd.h"
+#include "pantalla.h"
 
 static const char *TAG_TAREAS = "TAREAS";
 
 /* ============================================================
- * CONTEXTO PRIVADO DEL SISTEMA
+ * CONTEXTO DEL SISTEMA
  * ============================================================ */
 
 static ContextoSistema_t contexto_sistema = {
@@ -25,7 +28,34 @@ static ContextoSistema_t contexto_sistema = {
 };
 
 /* ============================================================
- * FUNCIONES PRIVADAS
+ * CLASIFICACION DE MOVIMIENTO
+ * ============================================================ */
+
+static estado_movimiento_t clasificar_movimiento(float a_prom,
+                                                 float a_max,
+                                                 float g_prom,
+                                                 float g_max)
+{
+    // CAIDA: aceleracion y giro muy altos
+    if (a_max > 2.2f && g_max > 200.0f) {
+        return MOVIMIENTO_CAIDA;
+    }
+
+    // QUIETO: casi sin movimiento
+    if (fabs(a_prom - 1.0f) < 0.1f && g_prom < 20.0f) {
+        return MOVIMIENTO_QUIETO;
+    }
+
+    // CAMINANDO: movimiento moderado
+    if (a_prom > 1.05f && a_prom < 1.8f && g_prom > 20.0f) {
+        return MOVIMIENTO_CAMINANDO;
+    }
+
+    return MOVIMIENTO_INDETERMINADO;
+}
+
+/* ============================================================
+ * CAMBIO DE ESTADO
  * ============================================================ */
 
 static void cambiar_al_siguiente_estado(void)
@@ -53,122 +83,129 @@ static void cambiar_al_siguiente_estado(void)
     }
 }
 
+/* ============================================================
+ * ESTADO RITMO
+ * ============================================================ */
+
 static void ejecutar_estado_ritmo(void)
 {
-    ResultadoRitmo_t resultado_ritmo;
-    memset(&resultado_ritmo, 0, sizeof(ResultadoRitmo_t));
+    ResultadoRitmo_t resultado;
+    memset(&resultado, 0, sizeof(resultado));
 
-    ESP_LOGI(TAG_TAREAS, "==============================");
-    ESP_LOGI(TAG_TAREAS, "ESTADO: RITMO CARDIACO");
-    ESP_LOGI(TAG_TAREAS, "==============================");
+    max30100_monitorear_signos_vitales(false, &resultado);
 
-    max30100_monitorear_signos_vitales(false, &resultado_ritmo);
+    sd_logger_printf("\n--- RITMO ---\n");
+    sd_logger_printf("BPM: %d | Calidad: %d\n",
+                     resultado.bpm_calculado,
+                     resultado.calidad_senal);
 
-    printf("\n----- RITMO CARDIACO -----\n");
-    printf("Estado lectura   : %s\n", resultado_ritmo.estado_texto);
-    printf("Contacto         : %s\n", resultado_ritmo.contacto_detectado ? "SI" : "NO");
-    printf("Valido           : %s\n", resultado_ritmo.resultado_valido ? "SI" : "NO");
-    printf("IR promedio      : %.2f\n", resultado_ritmo.ir_promedio);
-    printf("Calidad senal    : %d\n", resultado_ritmo.calidad_senal);
-    printf("BPM calculado    : %d\n", resultado_ritmo.bpm_calculado);
-    printf("--------------------------\n\n");
+    // Mostrar en pantalla
+    pantalla_mostrar_ritmo(resultado.bpm_calculado,
+                           resultado.calidad_senal,
+                           resultado.estado_texto);
 
-    if (resultado_ritmo.resultado_valido) {
-        if ((float)resultado_ritmo.bpm_calculado < RITMO_MIN_LPM ||
-            (float)resultado_ritmo.bpm_calculado > RITMO_MAX_LPM) {
+    // ALERTA ROJA
+    if (resultado.resultado_valido) {
+        if (resultado.bpm_calculado < RITMO_MIN_LPM ||
+            resultado.bpm_calculado > RITMO_MAX_LPM) {
+
             contexto_sistema.contador_alertas_rojas++;
-            printf("ALERTA ROJA: Ritmo cardiaco fuera de rango\n");
-            printf("Total alertas rojas: %lu\n\n", (unsigned long)contexto_sistema.contador_alertas_rojas);
+
+            pantalla_mostrar_alerta("RITMO FUERA DE RANGO", COLOR_ROJO);
+
+            sd_logger_printf("ALERTA ROJA\n");
         }
     }
-}
-
-static void ejecutar_estado_spo2(void)
-{
-    ResultadoRitmo_t resultado_spo2;
-    memset(&resultado_spo2, 0, sizeof(ResultadoRitmo_t));
-
-    ESP_LOGI(TAG_TAREAS, "==============================");
-    ESP_LOGI(TAG_TAREAS, "ESTADO: SATURACION DE OXIGENO");
-    ESP_LOGI(TAG_TAREAS, "==============================");
-
-    max30100_monitorear_signos_vitales(false, &resultado_spo2);
-
-    printf("\n----- SATURACION DE OXIGENO -----\n");
-    printf("Estado lectura   : %s\n", resultado_spo2.estado_texto);
-    printf("Contacto         : %s\n", resultado_spo2.contacto_detectado ? "SI" : "NO");
-    printf("Valido           : %s\n", resultado_spo2.resultado_valido ? "SI" : "NO");
-    printf("IR promedio      : %.2f\n", resultado_spo2.ir_promedio);
-    printf("Calidad senal    : %d\n", resultado_spo2.calidad_senal);
-    printf("SpO2 estimada    : %.2f %%\n", resultado_spo2.spo2_estimada);
-    printf("---------------------------------\n\n");
-}
-
-static void ejecutar_estado_acelerometro(void)
-{
-    TickType_t tiempo_inicio = xTaskGetTickCount();
-    TickType_t tiempo_estado = pdMS_TO_TICKS(TIEMPO_ESTADO_MS);
-
-    Acelerometro_t acelerometro;
-
-    ESP_LOGI(TAG_TAREAS, "==============================");
-    ESP_LOGI(TAG_TAREAS, "ESTADO: ACELEROMETRO");
-    ESP_LOGI(TAG_TAREAS, "==============================");
-
-    printf("\n----- ACELEROMETRO -----\n");
-
-    while ((xTaskGetTickCount() - tiempo_inicio) < tiempo_estado) {
-        if (qmi8658_leer_acelerometro(&acelerometro) == ESP_OK) {
-            printf("AX: %.3f g | AY: %.3f g | AZ: %.3f g\n",
-                   acelerometro.ax,
-                   acelerometro.ay,
-                   acelerometro.az);
-        } else {
-            printf("Error leyendo acelerometro\n");
-        }
-
-        vTaskDelay(pdMS_TO_TICKS(200));
-    }
-
-    printf("------------------------\n\n");
-}
-
-static void ejecutar_estado_giroscopio(void)
-{
-    TickType_t tiempo_inicio = xTaskGetTickCount();
-    TickType_t tiempo_estado = pdMS_TO_TICKS(TIEMPO_ESTADO_MS);
-
-    Giroscopio_t giroscopio;
-
-    ESP_LOGI(TAG_TAREAS, "==============================");
-    ESP_LOGI(TAG_TAREAS, "ESTADO: GIROSCOPIO");
-    ESP_LOGI(TAG_TAREAS, "==============================");
-
-    printf("\n----- GIROSCOPIO -----\n");
-
-    while ((xTaskGetTickCount() - tiempo_inicio) < tiempo_estado) {
-        if (qmi8658_leer_giroscopio(&giroscopio) == ESP_OK) {
-            printf("GX: %.3f dps | GY: %.3f dps | GZ: %.3f dps\n",
-                   giroscopio.gx,
-                   giroscopio.gy,
-                   giroscopio.gz);
-        } else {
-            printf("Error leyendo giroscopio\n");
-        }
-
-        vTaskDelay(pdMS_TO_TICKS(200));
-    }
-
-    printf("----------------------\n\n");
 }
 
 /* ============================================================
- * API PUBLICA
+ * ESTADO SPO2
+ * ============================================================ */
+
+static void ejecutar_estado_spo2(void)
+{
+    ResultadoRitmo_t resultado;
+    memset(&resultado, 0, sizeof(resultado));
+
+    max30100_monitorear_signos_vitales(false, &resultado);
+
+    sd_logger_printf("\n--- SPO2 ---\n");
+    sd_logger_printf("SpO2: %.2f\n", resultado.spo2_estimada);
+
+    pantalla_mostrar_spo2(resultado.spo2_estimada,
+                          resultado.estado_texto);
+}
+
+/* ============================================================
+ * ESTADO MOVIMIENTO (ACELEROMETRO + GIROSCOPIO)
+ * ============================================================ */
+
+static void ejecutar_estado_movimiento(void)
+{
+    TickType_t inicio = xTaskGetTickCount();
+    TickType_t duracion = pdMS_TO_TICKS(TIEMPO_ESTADO_MS);
+
+    Acelerometro_t acc;
+    Giroscopio_t gyro;
+
+    float suma_a = 0;
+    float suma_g = 0;
+
+    float max_a = 0;
+    float max_g = 0;
+
+    int muestras = 0;
+
+    while ((xTaskGetTickCount() - inicio) < duracion) {
+
+        if (qmi8658_leer_acelerometro(&acc) == ESP_OK &&
+            qmi8658_leer_giroscopio(&gyro) == ESP_OK) {
+
+            float a_mag = sqrtf(acc.ax * acc.ax +
+                                acc.ay * acc.ay +
+                                acc.az * acc.az);
+
+            float g_mag = sqrtf(gyro.gx * gyro.gx +
+                                gyro.gy * gyro.gy +
+                                gyro.gz * gyro.gz);
+
+            suma_a += a_mag;
+            suma_g += g_mag;
+
+            if (a_mag > max_a) max_a = a_mag;
+            if (g_mag > max_g) max_g = g_mag;
+
+            muestras++;
+        }
+
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+
+    if (muestras == 0) return;
+
+    float a_prom = suma_a / muestras;
+    float g_prom = suma_g / muestras;
+
+    estado_movimiento_t estado = clasificar_movimiento(a_prom, max_a, g_prom, max_g);
+
+    sd_logger_printf("\n--- MOVIMIENTO ---\n");
+    sd_logger_printf("A_prom: %.2f | G_prom: %.2f\n", a_prom, g_prom);
+
+    pantalla_mostrar_movimiento(a_prom, g_prom, estado);
+
+    // ALERTA CAIDA
+    if (estado == MOVIMIENTO_CAIDA) {
+        pantalla_mostrar_alerta("CAIDA DETECTADA", COLOR_ROJO);
+    }
+}
+
+/* ============================================================
+ * INICIALIZACION
  * ============================================================ */
 
 void tareas_inicializar(void)
 {
-    ESP_LOGI(TAG_TAREAS, "Inicializando tareas del sistema...");
+    ESP_LOGI(TAG_TAREAS, "Inicializando sistema...");
 
     ESP_ERROR_CHECK(max30100_inicializar_i2c());
     ESP_ERROR_CHECK(max30100_inicializar_sensor());
@@ -176,16 +213,25 @@ void tareas_inicializar(void)
     ESP_ERROR_CHECK(qmi8658_inicializar_i2c());
     ESP_ERROR_CHECK(qmi8658_inicializar_sensor());
 
-    contexto_sistema.estado_actual = ESTADO_RITMO;
-    contexto_sistema.contador_alertas_amarillas = 0;
-    contexto_sistema.contador_alertas_rojas = 0;
+    pantalla_inicializar();
+    pantalla_mostrar_inicio();
 
-    ESP_LOGI(TAG_TAREAS, "Sistema inicializado correctamente");
+    esp_err_t ret = sd_logger_inicializar();
+    if (ret != ESP_OK) {
+        ESP_LOGW(TAG_TAREAS, "SD no disponible");
+    }
+
+    contexto_sistema.estado_actual = ESTADO_RITMO;
 }
+
+/* ============================================================
+ * MAQUINA DE ESTADOS
+ * ============================================================ */
 
 void tareas_ejecutar_maquina_estados(void)
 {
     switch (contexto_sistema.estado_actual) {
+
         case ESTADO_RITMO:
             ejecutar_estado_ritmo();
             break;
@@ -195,11 +241,8 @@ void tareas_ejecutar_maquina_estados(void)
             break;
 
         case ESTADO_ACELEROMETRO:
-            ejecutar_estado_acelerometro();
-            break;
-
         case ESTADO_GIROSCOPIO:
-            ejecutar_estado_giroscopio();
+            ejecutar_estado_movimiento();
             break;
 
         default:
