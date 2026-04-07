@@ -5,7 +5,6 @@ idf_component_register(
         "max30100.c"
         "qmi8658.c"
         "sd.c"
-        "pantalla.c"
     INCLUDE_DIRS
         "."
 )
