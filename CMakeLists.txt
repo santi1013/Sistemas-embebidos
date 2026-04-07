@@ -1,11 +1,9 @@
 idf_component_register(
-    SRCS
-        "main.c"
-        "tareas.c"
-        "max30100.c"
-        "qmi8658.c"
-        "sd.c"
-        "pantalla.c"
-    INCLUDE_DIRS
-        "."
+    SRCS "main.c"
+    INCLUDE_DIRS "."
+    REQUIRES
+        driver
+        fatfs
+        sdmmc
+        esp_driver_spi
 )
